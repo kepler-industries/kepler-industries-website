@@ -66,6 +66,15 @@ async function walkStrings(node, path, visit) {
   return node;
 }
 
+// next-intl uses ICU MessageFormat. A bare apostrophe before {, }, #, or <
+// opens a quoted-literal section that swallows tags as plain text. Doubling
+// the apostrophe (ICU rule: '' is one literal ') prevents that.
+// See https://next-intl.dev/docs/usage/messages#escaping
+function escapeIcuApostrophes(text) {
+  if (typeof text !== "string") return text;
+  return text.replace(/'(?=[<{}#])/g, "''");
+}
+
 async function translateString(text, targetLocale) {
   if (!text || !text.trim()) return text;
   const hasHtml = /<[a-z][^>]*>/i.test(text);
@@ -78,7 +87,7 @@ async function translateString(text, targetLocale) {
         // The endpoint preserves <tags> when given as HTML.
         ...(hasHtml ? { format: "html" } : {}),
       });
-      return result.text;
+      return escapeIcuApostrophes(result.text);
     } catch (err) {
       if (attempt === MAX_RETRIES) throw err;
       const wait = 500 * attempt;
