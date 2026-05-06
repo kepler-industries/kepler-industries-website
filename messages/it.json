@@ -1,234 +1,183 @@
 {
   "Metadata": {
     "title": "Kepler Industries — Studio per prodotti digitali ambiziosi",
-    "description": "Kepler Industries è uno studio creativo indipendente che progetta e realizza prodotti digitali puliti e ambiziosi: interfacce, marchi e software al limite del possibile.",
+    "description": "Kepler Industries è uno studio creativo indipendente che progetta e costruisce prodotti digitali puliti e ambiziosi — interfacce, identità e software al limite del possibile.",
     "ogTitle": "Kepler Industries — Studio per prodotti digitali ambiziosi",
-    "ogDescription": "Uno studio indipendente che progetta e realizza prodotti digitali con cura, gusto e lungimiranza.",
+    "ogDescription": "Uno studio indipendente che progetta e costruisce prodotti digitali con cura, gusto e una visione a lungo termine.",
     "twitterDescription": "Studio per prodotti digitali ambiziosi. Web · App · Prodotto."
   },
   "Nav": {
-    "homeAriaLabel": "Sede delle industrie Kepler",
-    "primaryAriaLabel": "Primario",
-    "about": "Di",
+    "homeAriaLabel": "Home Kepler Industries",
+    "primaryAriaLabel": "Principale",
+    "about": "Studio",
     "vision": "Visione",
     "projects": "Progetti",
     "services": "Servizi",
-    "contact": "Contatto",
+    "contact": "Contatti",
     "cta": "Avvia un progetto"
   },
   "LanguageSwitcher": {
     "label": "Cambia lingua"
   },
   "Hero": {
-    "screenLabel": "01 Eroe",
+    "screenLabel": "01 Hero",
     "bulletin": "K-01 / Bollettino dello Studio / 2026.05",
-    "openSlots": "Attualmente in classifica · 02 slot aperti",
+    "openSlots": "In tracciamento · 02 slot disponibili",
     "titleLine1": "Costruire oltre",
     "titleLine2": "l''<em>orizzonte conosciuto.</em>",
-    "lede": "Kepler Industries è uno studio creativo che progetta prodotti digitali puliti e ambiziosi: interfacce, marchi e software al limite del possibile.",
-    "viewProjects": "Visualizza progetti",
+    "lede": "Kepler Industries è uno studio creativo che progetta prodotti digitali puliti e ambiziosi — interfacce, identità e software al limite del possibile.",
+    "viewProjects": "Vedi i progetti",
     "startProject": "Avvia un progetto",
     "readout": {
       "trajectoryLabel": "Traiettoria",
       "trajectoryValue": "SOLO → <em>STUDIO</em>",
       "disciplinesLabel": "Discipline",
-      "disciplinesValue": "WEB · APP · MARCHIO",
-      "operatingSinceLabel": "Operativo da",
-      "operatingSinceValue": "2021 · <em>Y4</em>",
+      "disciplinesValue": "WEB · APP · IDENTITÀ",
+      "operatingSinceLabel": "Operativo dal",
+      "operatingSinceValue": "2021 · <em>A4</em>",
       "coordinatesLabel": "Coordinate",
-      "coordinatesValue": "LAT 48,86° · GNL 2,34°"
+      "coordinatesValue": "LAT 48,86° · LNG 2,34°"
     }
   },
   "About": {
-    "screenLabel": "02 Informazioni",
-    "titleLine1": "Uno studio nato da",
+    "screenLabel": "02 Studio",
+    "titleLine1": "Uno studio nato dalla",
     "titleLine2": "<em>curiosità.</em>",
-    "metaNum": "— 02 / Informazioni",
-    "metaDesc": "Una pratica personale che si è trasformata in uno studio serio per l'artigianato digitale raffinato e intenzionale.",
-    "lead": "Kepler è iniziato come il taccuino di un designer, un luogo in cui inseguire idee senza permesso. Oggi opera come uno <em>studio concentrato</em>, che si occupa di un piccolo numero di progetti ogni anno e rivolge la stessa attenzione ossessiva a ogni pixel, ogni suggerimento, ogni prodotto.",
-    "body1": "Lavoriamo con fondatori, operatori e team che hanno a cuore la sensazione del loro prodotto, non solo quello che fa. L'opera è di piccolo volume, profonda nell'esecuzione e modellata dal gusto piuttosto che dalla tendenza.",
-    "body2": "Ciò che era iniziato come un'esplorazione personale è maturato in uno studio con la disciplina di un team senior e l'immediatezza di un singolo artigiano. Nessun intermediario, nessun mazzo fine a se stesso: solo pensiero chiaro, progettazione ponderata ed esecuzione pulita.",
+    "metaNum": "— 02 / Studio",
+    "metaDesc": "Una pratica personale cresciuta fino a diventare uno studio serio, dedicato a un design digitale raffinato e intenzionale.",
+    "lead": "Kepler è nato come il quaderno di un designer — un luogo per inseguire idee senza chiedere permesso. Oggi opera come uno <em>studio concentrato</em>, accettando un numero ridotto di progetti ogni anno e portando la stessa attenzione ossessiva a ogni pixel, ogni prompt, ogni prodotto.",
+    "body1": "Lavoriamo con fondatori, operatori e team che hanno a cuore come si percepisce il loro prodotto — non solo cosa fa. Il lavoro è ridotto nel volume, profondo nell'esecuzione, e plasmato dal gusto piuttosto che dalla tendenza.",
+    "body2": "Ciò che è iniziato come esplorazione personale è maturato in uno studio con la disciplina di un team senior e la franchezza di un singolo artigiano. Niente intermediari, niente presentazioni fini a sé stesse — solo pensiero chiaro, design ponderato ed esecuzione pulita.",
     "stats": {
       "yearsLabel": "Anni in orbita",
-      "productsLabel": "Prodotti spediti",
-      "foundersLabel": "I fondatori hanno servito",
+      "productsLabel": "Prodotti consegnati",
+      "foundersLabel": "Fondatori serviti",
       "iterationsLabel": "Iterazioni rimanenti"
     }
   },
   "Vision": {
     "screenLabel": "03 Visione",
     "eyebrow": "03 / Filosofia",
-    "titleLine1": "Progettiamo per ciò che è",
-    "titleLine2": "<em>non ancora qui.</em>",
+    "titleLine1": "Progettiamo ciò che",
+    "titleLine2": "<em>non c'è ancora.</em>",
     "tags": {
       "trajectory": "Traiettoria · 042",
       "heat": "Firma termica · Rilevata",
-      "coords": "Latitudine 48° · Lng 2°",
-      "status": "Stato · Grafici"
+      "coords": "Lat 48° · Lng 2°",
+      "status": "Stato · Tracciamento"
     },
     "principles": [
       {
         "num": "— Principio 01",
-        "title": "Spingi <em>oltre</em>.",
-        "body": "Il comfort è nemico dell’artigianato. Ogni progetto è un'opportunità per estendere la linea, per creare qualcosa di un po' più raffinato, un po' più audace rispetto a ciò che è venuto prima."
+        "title": "Andare <em>oltre</em>.",
+        "body": "Il comfort è il nemico del mestiere. Ogni progetto è un'occasione per estendere la linea — per fare qualcosa di un po' più raffinato, un po' più audace, di ciò che è venuto prima."
       },
       {
         "num": "— Principio 02",
-        "title": "Rimani <em>preciso</em>.",
-        "body": "L’ambizione senza precisione è rumore. Sudiamo il tipo, i tempi, la spaziatura, perché la differenza tra buono e indimenticabile vive nei dettagli."
+        "title": "Restare <em>precisi</em>.",
+        "body": "L'ambizione senza precisione è rumore. Curiamo il carattere, il ritmo, la spaziatura — perché la differenza tra il buono e l'indimenticabile vive nei dettagli."
       },
       {
         "num": "— Principio 03",
-        "title": "Costruisci <em>tranquillamente</em>.",
-        "body": "L'opera migliore non si annuncia da sola. Progettiamo prodotti che sembrano inevitabili: calmi, ponderati e costruiti per durare oltre il ciclo di lancio."
+        "title": "Costruire <em>in silenzio</em>.",
+        "body": "Il miglior lavoro non si annuncia. Progettiamo prodotti che sembrano inevitabili — calmi, ponderati e costruiti per durare oltre il ciclo di lancio."
       }
     ]
   },
   "Projects": {
     "screenLabel": "04 Progetti",
-    "titleLine1": "Selezionata",
-    "titleLine2": "<em>lavoro.</em>",
+    "titleLine1": "Lavori",
+    "titleLine2": "<em>selezionati.</em>",
     "metaNum": "— 04 / Progetti · 2023–2026",
-    "metaDesc": "Una serie curata di missioni recenti. Ciascuno spedito, ciascuno modellato secondo gli stessi principi dello studio.",
+    "metaDesc": "Una selezione curata di missioni recenti. Tutte consegnate, tutte plasmate dagli stessi principi dello studio.",
     "items": [
-      {
-        "num": "001",
-        "prefix": "Atlante",
-        "emphasis": "Campo",
-        "type": "Marchio · Web",
-        "year": "2026"
-      },
-      {
-        "num": "002",
-        "prefix": "Stella polare",
-        "emphasis": "sistema operativo",
-        "type": "Prodotto · App nativa",
-        "year": "2025"
-      },
-      {
-        "num": "003",
-        "prefix": "Tessera",
-        "emphasis": "Audio",
-        "type": "Web · Identità",
-        "year": "2025"
-      },
-      {
-        "num": "004",
-        "prefix": "Caldera",
-        "emphasis": "Salute",
-        "type": "Prodotto · Sistema di progettazione",
-        "year": "2024"
-      },
-      {
-        "num": "005",
-        "prefix": "Elica",
-        "emphasis": "Capitale",
-        "type": "Marchio · Sito di marketing",
-        "year": "2024"
-      },
-      {
-        "num": "006",
-        "prefix": "Meridiana",
-        "emphasis": "Lettere",
-        "type": "Editoriale · Web",
-        "year": "2023"
-      }
+      { "num": "001", "prefix": "Atlas", "emphasis": "Field", "type": "Brand · Web", "year": "2026" },
+      { "num": "002", "prefix": "Northstar", "emphasis": "OS", "type": "Prodotto · App nativa", "year": "2025" },
+      { "num": "003", "prefix": "Tessera", "emphasis": "Audio", "type": "Web · Identità", "year": "2025" },
+      { "num": "004", "prefix": "Caldera", "emphasis": "Health", "type": "Prodotto · Design System", "year": "2024" },
+      { "num": "005", "prefix": "Helix", "emphasis": "Capital", "type": "Brand · Sito marketing", "year": "2024" },
+      { "num": "006", "prefix": "Meridian", "emphasis": "Letters", "type": "Editoriale · Web", "year": "2023" }
     ]
   },
   "Services": {
     "screenLabel": "05 Servizi",
-    "titleLine1": "Quello che noi",
-    "titleLine2": "<em>fai.</em>",
+    "titleLine1": "Cosa",
+    "titleLine2": "<em>facciamo.</em>",
     "metaNum": "— 05 / Servizi",
-    "metaDesc": "Tre discipline, profondamente praticate. Impegnati da soli o in combinazione, end-to-end.",
+    "metaDesc": "Tre discipline, praticate in profondità. Ingaggiate singolarmente o in combinazione, end-to-end.",
     "items": [
       {
-        "num": "—01",
-        "prefix": "Rete",
-        "emphasis": "Progetto",
-        "body": "Siti di marketing, pagine di prodotto ed esperienze interattive progettati per garantire chiarezza e impatto. Strategia, direzione artistica e implementazione in un ciclo continuo.",
-        "tags": [
-          "Direzione artistica",
-          "Flusso web",
-          "Next.js",
-          "Movimento"
-        ]
+        "num": "— 01",
+        "prefix": "Web",
+        "emphasis": "Design",
+        "body": "Siti marketing, pagine prodotto ed esperienze interattive progettate per chiarezza e impatto. Strategia, direzione artistica e implementazione in un unico ciclo continuo.",
+        "tags": ["Direzione artistica", "Webflow", "Next.js", "Motion"]
       },
       {
-        "num": "—02",
+        "num": "— 02",
         "prefix": "App",
-        "emphasis": "Sviluppo",
-        "body": "App native e multipiattaforma realizzate con la disciplina di un team interno. Dal primo prototipo al software di produzione, progettato per essere nativo del dispositivo.",
-        "tags": [
-          "iOS",
-          "SwiftUI",
-          "Reagire nativo",
-          "Backend"
-        ]
+        "emphasis": "Development",
+        "body": "App native e multipiattaforma costruite con la disciplina di un team interno. Dal primo prototipo al software di produzione, progettate per sembrare native sul dispositivo.",
+        "tags": ["iOS", "SwiftUI", "React Native", "Backend"]
       },
       {
-        "num": "—03",
-        "prefix": "Prodotto",
-        "emphasis": "Progetto",
-        "body": "Progettazione di prodotti end-to-end per software che si guadagnano il posto giusto. Scoperta, sistemi, flussi e interfacce – concepiti come un unico organismo considerato.",
-        "tags": [
-          "Sistemi di progettazione",
-          "Ricerca sull'esperienza utente",
-          "Prototipazione",
-          "Marca"
-        ]
+        "num": "— 03",
+        "prefix": "Product",
+        "emphasis": "Design",
+        "body": "Product design end-to-end per software che si guadagna il suo posto. Discovery, sistemi, flussi e interfacce — progettati come un unico organismo ponderato.",
+        "tags": ["Design Systems", "Ricerca UX", "Prototipazione", "Brand"]
       }
     ]
   },
   "Contact": {
-    "screenLabel": "06 Contatto",
-    "eyebrow": "06 / Trasmetti",
-    "titleLine1": "Tracciamo qualcosa",
-    "titleLine2": "<em>nuovo.</em>",
-    "sub": "Raccontaci del prodotto che vuoi realizzare. Rispondiamo entro due giorni lavorativi, senza preconcetti.",
+    "screenLabel": "06 Contatti",
+    "eyebrow": "06 / Trasmettere",
+    "titleLine1": "Tracciamo insieme",
+    "titleLine2": "qualcosa di <em>nuovo.</em>",
+    "sub": "Raccontaci del prodotto che vuoi costruire. Rispondiamo entro due giorni lavorativi — senza formule prefatte.",
     "fields": {
       "name": "Nome",
       "namePlaceholder": "Ada Lovelace",
-      "email": "E-mail",
+      "email": "Email",
       "emailPlaceholder": "ada@signal.io",
       "scope": "Ambito",
       "scopeOptions": [
-        "Progettazione Web",
-        "Sviluppo di app",
-        "Progettazione del prodotto",
-        "Coinvolgimento completo dello studio"
+        "Web Design",
+        "Sviluppo App",
+        "Product Design",
+        "Engagement Studio completo"
       ],
-      "message": "Breve missione",
-      "messagePlaceholder": "Alcune frasi su ciò che stai costruendo, dove è diretto e quando ne hai bisogno."
+      "message": "Brief della missione",
+      "messagePlaceholder": "Qualche frase su cosa stai costruendo, dove sta andando e quando ti serve."
     },
-    "submit": "Trasmettere",
-    "transmitting": "· Trasmissione del segnale...",
-    "received": "✶ Segnale ricevuto. Rispondi entro 48h."
+    "submit": "Trasmetti",
+    "transmitting": "· Trasmissione del segnale…",
+    "received": "✶ Segnale ricevuto. Risposta entro 48 h."
   },
   "Footer": {
-    "tagline": "Uno studio indipendente che progetta e realizza prodotti digitali con cura, gusto e lungimiranza.",
+    "tagline": "Uno studio indipendente che progetta e costruisce prodotti digitali con cura, gusto e una visione a lungo termine.",
     "studio": {
       "title": "Studio",
-      "about": "Di",
+      "about": "Studio",
       "vision": "Visione",
       "projects": "Progetti",
       "services": "Servizi"
     },
     "connect": {
-      "title": "Collegare",
-      "email": "ciao@kepler-industries.com",
+      "title": "Contatti",
+      "email": "hello@kepler-industries.com",
       "arena": "Are.na",
       "readcv": "Read.cv",
-      "twitter": "Twitter/X"
+      "twitter": "Twitter / X"
     },
     "signal": {
       "title": "Segnale",
-      "newsletter": "Newsletter – trimestrale",
-      "fieldNotes": "Note sul campo",
-      "pressKit": "Cartella stampa"
+      "newsletter": "Newsletter — trimestrale",
+      "fieldNotes": "Note di campo",
+      "pressKit": "Press kit"
     },
     "copyright": "© 2026 Kepler Industries · Tutti i diritti riservati",
-    "coords": "48,8566°N · 2,3522°E",
+    "coords": "48,8566° N · 2,3522° E",
     "version": "v 1.04 / build 2026·05"
   }
 }
