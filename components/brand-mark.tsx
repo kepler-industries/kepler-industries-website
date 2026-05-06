@@ -1,38 +1,16 @@
+import Image from "next/image";
+import keplerLogo from "@/public/kepler.png";
+
 export function BrandMark() {
   return (
     <span className="brand-mark">
-      <svg viewBox="0 0 26 26" fill="none">
-        <circle cx="13" cy="13" r="3.5" fill="#ff6a17" />
-        <ellipse
-          cx="13"
-          cy="13"
-          rx="11"
-          ry="4"
-          stroke="#ff8a3c"
-          strokeWidth="1"
-          opacity="0.7"
-        />
-        <ellipse
-          cx="13"
-          cy="13"
-          rx="11"
-          ry="4"
-          stroke="#ff8a3c"
-          strokeWidth="1"
-          opacity="0.4"
-          transform="rotate(60 13 13)"
-        />
-        <ellipse
-          cx="13"
-          cy="13"
-          rx="11"
-          ry="4"
-          stroke="#ff8a3c"
-          strokeWidth="1"
-          opacity="0.4"
-          transform="rotate(-60 13 13)"
-        />
-      </svg>
+      <Image
+        src={keplerLogo}
+        alt="Kepler Industries"
+        width={26}
+        height={26}
+        priority
+      />
     </span>
   );
 }
