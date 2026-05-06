@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "translate": "node scripts/translate.mjs",
+    "prebuild": "node scripts/translate.mjs"
   },
   "dependencies": {
     "next": "16.2.5",
+    "next-intl": "^4.11.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -17,6 +20,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "google-translate-api-x": "^10.7.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

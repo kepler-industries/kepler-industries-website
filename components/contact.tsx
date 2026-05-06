@@ -1,79 +1,83 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { ArrowIcon } from "./brand-mark";
 
 export function Contact() {
+  const t = useTranslations("Contact");
+  const f = useTranslations("Contact.fields");
+  const options = f.raw("scopeOptions") as string[];
   const [status, setStatus] = useState("");
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("· Transmitting signal…");
+    setStatus(t("transmitting"));
     const form = e.currentTarget;
     setTimeout(() => {
-      setStatus("✶ Signal received. Reply within 48h.");
+      setStatus(t("received"));
       form.reset();
     }, 1100);
   };
 
+  const em = (chunks: React.ReactNode) => <em>{chunks}</em>;
+
   return (
-    <section className="contact" id="contact" data-screen-label="06 Contact">
+    <section className="contact" id="contact" data-screen-label={t("screenLabel")}>
       <div className="contact-glow" aria-hidden="true" />
       <div className="container contact-inner">
         <div className="eyebrow" style={{ justifyContent: "center" }}>
           <span className="tick" />
-          06 / Transmit
+          {t("eyebrow")}
         </div>
         <h2 style={{ marginTop: 18 }}>
-          Let&apos;s chart something <em>new.</em>
+          {t("titleLine1")} {t.rich("titleLine2", { em })}
         </h2>
-        <p className="sub">
-          Tell us about the product you want to build. We reply within two
-          working days — no boilerplate.
-        </p>
+        <p className="sub">{t("sub")}</p>
 
         <form className="contact-form" onSubmit={onSubmit}>
           <div className="form-row">
             <div className="field">
-              <label htmlFor="f-name">Name</label>
+              <label htmlFor="f-name">{f("name")}</label>
               <input
                 id="f-name"
                 name="name"
                 type="text"
-                placeholder="Ada Lovelace"
+                placeholder={f("namePlaceholder")}
                 required
               />
             </div>
             <div className="field">
-              <label htmlFor="f-email">Email</label>
+              <label htmlFor="f-email">{f("email")}</label>
               <input
                 id="f-email"
                 name="email"
                 type="email"
-                placeholder="ada@signal.io"
+                placeholder={f("emailPlaceholder")}
                 required
               />
             </div>
           </div>
           <div className="field">
-            <label htmlFor="f-scope">Scope</label>
-            <select id="f-scope" name="scope" defaultValue="Web Design">
-              <option>Web Design</option>
-              <option>App Development</option>
-              <option>Product Design</option>
-              <option>Full Studio Engagement</option>
+            <label htmlFor="f-scope">{f("scope")}</label>
+            <select id="f-scope" name="scope" defaultValue={options[0]}>
+              {options.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
             </select>
           </div>
           <div className="field">
-            <label htmlFor="f-msg">Mission Brief</label>
+            <label htmlFor="f-msg">{f("message")}</label>
             <textarea
               id="f-msg"
               name="message"
-              placeholder="A few sentences on what you're building, where it's headed, and when you need it."
+              placeholder={f("messagePlaceholder")}
             />
           </div>
           <button className="btn btn-primary form-submit" type="submit">
-            Transmit
+            {t("submit")}
             <ArrowIcon />
           </button>
           <div className="form-status" aria-live="polite">

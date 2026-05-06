@@ -1,0 +1,183 @@
+{
+  "Metadata": {
+    "title": "Kepler Industries — Studio for ambitious digital products",
+    "description": "Kepler Industries is an independent creative studio designing and building clean, ambitious digital products — interfaces, brands and software at the edge of what's possible.",
+    "ogTitle": "Kepler Industries — Studio for ambitious digital products",
+    "ogDescription": "An independent studio designing and building digital products with care, taste and a long view.",
+    "twitterDescription": "Studio for ambitious digital products. Web · App · Product."
+  },
+  "Nav": {
+    "homeAriaLabel": "Kepler Industries home",
+    "primaryAriaLabel": "Primary",
+    "about": "About",
+    "vision": "Vision",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "cta": "Start a Project"
+  },
+  "LanguageSwitcher": {
+    "label": "Change language"
+  },
+  "Hero": {
+    "screenLabel": "01 Hero",
+    "bulletin": "K-01 / Studio Bulletin / 2026.05",
+    "openSlots": "Currently Charting · 02 Open Slots",
+    "titleLine1": "Building beyond",
+    "titleLine2": "the <em>known horizon.</em>",
+    "lede": "Kepler Industries is a creative studio designing clean, ambitious digital products — interfaces, brands, and software at the edge of what's possible.",
+    "viewProjects": "View Projects",
+    "startProject": "Start a Project",
+    "readout": {
+      "trajectoryLabel": "Trajectory",
+      "trajectoryValue": "SOLO → <em>STUDIO</em>",
+      "disciplinesLabel": "Disciplines",
+      "disciplinesValue": "WEB · APP · BRAND",
+      "operatingSinceLabel": "Operating Since",
+      "operatingSinceValue": "2021 · <em>Y4</em>",
+      "coordinatesLabel": "Coordinates",
+      "coordinatesValue": "LAT 48.86° · LNG 2.34°"
+    }
+  },
+  "About": {
+    "screenLabel": "02 About",
+    "titleLine1": "A studio born from",
+    "titleLine2": "<em>curiosity.</em>",
+    "metaNum": "— 02 / About",
+    "metaDesc": "A personal practice that grew into a serious studio for refined, intentional digital craft.",
+    "lead": "Kepler began as one designer's notebook — a place to chase ideas without permission. Today it operates as a <em>focused studio</em>, taking on a small number of projects each year and bringing the same obsessive attention to every pixel, every prompt, every product.",
+    "body1": "We work with founders, operators and teams who care about how their product feels — not just what it does. The work is small in volume, deep in execution, and shaped by taste rather than trend.",
+    "body2": "What started as personal exploration has matured into a studio with the discipline of a senior team and the directness of a single craftsman. No middlemen, no decks-for-the-sake-of-decks — just clear thinking, considered design, and clean execution.",
+    "stats": {
+      "yearsLabel": "Years in orbit",
+      "productsLabel": "Products shipped",
+      "foundersLabel": "Founders served",
+      "iterationsLabel": "Iterations remaining"
+    }
+  },
+  "Vision": {
+    "screenLabel": "03 Vision",
+    "eyebrow": "03 / Philosophy",
+    "titleLine1": "We design for what's",
+    "titleLine2": "<em>not yet here.</em>",
+    "tags": {
+      "trajectory": "Trajectory · 042",
+      "heat": "Heat Signature · Detected",
+      "coords": "Lat 48° · Lng 2°",
+      "status": "Status · Charting"
+    },
+    "principles": [
+      {
+        "num": "— Principle 01",
+        "title": "Push <em>further</em>.",
+        "body": "Comfort is the enemy of craft. Every project is a chance to extend the line — to make something a little more refined, a little more daring, than what came before."
+      },
+      {
+        "num": "— Principle 02",
+        "title": "Stay <em>precise</em>.",
+        "body": "Ambition without precision is noise. We sweat the type, the timing, the spacing — because the difference between good and unforgettable lives in the details."
+      },
+      {
+        "num": "— Principle 03",
+        "title": "Build <em>quietly</em>.",
+        "body": "The best work doesn't announce itself. We design products that feel inevitable — calm, considered, and built to last beyond the launch cycle."
+      }
+    ]
+  },
+  "Projects": {
+    "screenLabel": "04 Projects",
+    "titleLine1": "Selected",
+    "titleLine2": "<em>work.</em>",
+    "metaNum": "— 04 / Projects · 2023–2026",
+    "metaDesc": "A curated set of recent missions. Each shipped, each shaped by the same studio principles.",
+    "items": [
+      { "num": "001", "prefix": "Atlas", "emphasis": "Field", "type": "Brand · Web", "year": "2026" },
+      { "num": "002", "prefix": "Northstar", "emphasis": "OS", "type": "Product · Native App", "year": "2025" },
+      { "num": "003", "prefix": "Tessera", "emphasis": "Audio", "type": "Web · Identity", "year": "2025" },
+      { "num": "004", "prefix": "Caldera", "emphasis": "Health", "type": "Product · Design System", "year": "2024" },
+      { "num": "005", "prefix": "Helix", "emphasis": "Capital", "type": "Brand · Marketing Site", "year": "2024" },
+      { "num": "006", "prefix": "Meridian", "emphasis": "Letters", "type": "Editorial · Web", "year": "2023" }
+    ]
+  },
+  "Services": {
+    "screenLabel": "05 Services",
+    "titleLine1": "What we",
+    "titleLine2": "<em>do.</em>",
+    "metaNum": "— 05 / Services",
+    "metaDesc": "Three disciplines, deeply practiced. Engaged solo or in combination, end-to-end.",
+    "items": [
+      {
+        "num": "— 01",
+        "prefix": "Web",
+        "emphasis": "Design",
+        "body": "Marketing sites, product pages, and interactive experiences engineered for clarity and impact. Strategy, art direction, and implementation in one continuous loop.",
+        "tags": ["Art Direction", "Webflow", "Next.js", "Motion"]
+      },
+      {
+        "num": "— 02",
+        "prefix": "App",
+        "emphasis": "Development",
+        "body": "Native and cross-platform apps built with the discipline of an in-house team. From first prototype to production-grade software, designed to feel native to the device.",
+        "tags": ["iOS", "SwiftUI", "React Native", "Backend"]
+      },
+      {
+        "num": "— 03",
+        "prefix": "Product",
+        "emphasis": "Design",
+        "body": "End-to-end product design for software that earns its place. Discovery, systems, flows and interfaces — designed as a single, considered organism.",
+        "tags": ["Design Systems", "UX Research", "Prototyping", "Brand"]
+      }
+    ]
+  },
+  "Contact": {
+    "screenLabel": "06 Contact",
+    "eyebrow": "06 / Transmit",
+    "titleLine1": "Let's chart something",
+    "titleLine2": "<em>new.</em>",
+    "sub": "Tell us about the product you want to build. We reply within two working days — no boilerplate.",
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "Ada Lovelace",
+      "email": "Email",
+      "emailPlaceholder": "ada@signal.io",
+      "scope": "Scope",
+      "scopeOptions": [
+        "Web Design",
+        "App Development",
+        "Product Design",
+        "Full Studio Engagement"
+      ],
+      "message": "Mission Brief",
+      "messagePlaceholder": "A few sentences on what you're building, where it's headed, and when you need it."
+    },
+    "submit": "Transmit",
+    "transmitting": "· Transmitting signal…",
+    "received": "✶ Signal received. Reply within 48h."
+  },
+  "Footer": {
+    "tagline": "An independent studio designing and building digital products with care, taste and a long view.",
+    "studio": {
+      "title": "Studio",
+      "about": "About",
+      "vision": "Vision",
+      "projects": "Projects",
+      "services": "Services"
+    },
+    "connect": {
+      "title": "Connect",
+      "email": "hello@kepler-industries.com",
+      "arena": "Are.na",
+      "readcv": "Read.cv",
+      "twitter": "Twitter / X"
+    },
+    "signal": {
+      "title": "Signal",
+      "newsletter": "Newsletter — quarterly",
+      "fieldNotes": "Field notes",
+      "pressKit": "Press kit"
+    },
+    "copyright": "© 2026 Kepler Industries · All rights reserved",
+    "coords": "48.8566° N · 2.3522° E",
+    "version": "v 1.04 / build 2026·05"
+  }
+}

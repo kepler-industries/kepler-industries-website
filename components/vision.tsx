@@ -1,15 +1,25 @@
-export function Vision() {
+import { getTranslations } from "next-intl/server";
+
+type Principle = { num: string; title: string; body: string };
+
+export async function Vision() {
+  const t = await getTranslations("Vision");
+  const tags = await getTranslations("Vision.tags");
+  const principles = t.raw("principles") as Principle[];
+
+  const em = (chunks: React.ReactNode) => <em>{chunks}</em>;
+
   return (
-    <section className="vision" id="vision" data-screen-label="03 Vision">
+    <section className="vision" id="vision" data-screen-label={t("screenLabel")}>
       <div className="container">
         <div className="eyebrow">
           <span className="tick" />
-          03 / Philosophy
+          {t("eyebrow")}
         </div>
         <h2 className="vision-head">
-          We design for what&apos;s
+          {t("titleLine1")}
           <br />
-          <em>not yet here.</em>
+          {t.rich("titleLine2", { em })}
         </h2>
 
         <div className="vision-stage" aria-hidden="true">
@@ -43,57 +53,34 @@ export function Vision() {
           <div className="planet" />
           <div className="vision-tags">
             <div className="vtag" style={{ left: "12%", top: "24%" }}>
-              Trajectory · 042
+              {tags("trajectory")}
             </div>
             <div className="vtag right" style={{ right: "14%", top: "32%" }}>
-              Heat Signature · Detected
+              {tags("heat")}
             </div>
             <div className="vtag" style={{ left: "8%", bottom: "22%" }}>
-              Lat 48° · Lng 2°
+              {tags("coords")}
             </div>
             <div
               className="vtag right"
               style={{ right: "10%", bottom: "28%" }}
             >
-              Status · Charting
+              {tags("status")}
             </div>
           </div>
         </div>
 
         <div className="vision-pillars">
-          <div className="vision-pillar">
-            <div className="vp-num">— Principle 01</div>
-            <h3 className="vp-title">
-              Push <em>further</em>.
-            </h3>
-            <p className="vp-body">
-              Comfort is the enemy of craft. Every project is a chance to
-              extend the line — to make something a little more refined, a
-              little more daring, than what came before.
-            </p>
-          </div>
-          <div className="vision-pillar">
-            <div className="vp-num">— Principle 02</div>
-            <h3 className="vp-title">
-              Stay <em>precise</em>.
-            </h3>
-            <p className="vp-body">
-              Ambition without precision is noise. We sweat the type, the
-              timing, the spacing — because the difference between good and
-              unforgettable lives in the details.
-            </p>
-          </div>
-          <div className="vision-pillar">
-            <div className="vp-num">— Principle 03</div>
-            <h3 className="vp-title">
-              Build <em>quietly</em>.
-            </h3>
-            <p className="vp-body">
-              The best work doesn&apos;t announce itself. We design products
-              that feel inevitable — calm, considered, and built to last beyond
-              the launch cycle.
-            </p>
-          </div>
+          {principles.map((p, i) => (
+            <div className="vision-pillar" key={i}>
+              <div className="vp-num">{p.num}</div>
+              <h3
+                className="vp-title"
+                dangerouslySetInnerHTML={{ __html: p.title }}
+              />
+              <p className="vp-body">{p.body}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

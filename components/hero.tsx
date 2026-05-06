@@ -1,37 +1,37 @@
+import { getTranslations } from "next-intl/server";
 import { ArrowIcon } from "./brand-mark";
 
-export function Hero() {
+export async function Hero() {
+  const t = await getTranslations("Hero");
+  const r = await getTranslations("Hero.readout");
+
   return (
-    <section className="hero" data-screen-label="01 Hero">
+    <section className="hero" data-screen-label={t("screenLabel")}>
       <div className="hero-bg" aria-hidden="true" />
       <div className="container">
         <div className="hero-meta">
-          <span>K-01 / Studio Bulletin / 2026.05</span>
+          <span>{t("bulletin")}</span>
           <span className="pulse">
             <span className="pulse-dot" />
-            Currently Charting · 02 Open Slots
+            {t("openSlots")}
           </span>
         </div>
 
         <h1 className="hero-title">
-          Building beyond
+          {t("titleLine1")}
           <br />
-          the <em>known horizon.</em>
+          {t.rich("titleLine2", { em: (chunks) => <em>{chunks}</em> })}
         </h1>
 
         <div className="hero-row">
-          <p className="hero-lede">
-            Kepler Industries is a creative studio designing clean, ambitious
-            digital products — interfaces, brands, and software at the edge of
-            what&apos;s possible.
-          </p>
+          <p className="hero-lede">{t("lede")}</p>
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
-              View Projects
+              {t("viewProjects")}
               <ArrowIcon />
             </a>
             <a href="#contact" className="btn btn-ghost">
-              Start a Project
+              {t("startProject")}
               <ArrowIcon />
             </a>
           </div>
@@ -39,24 +39,28 @@ export function Hero() {
 
         <dl className="hero-readout">
           <div>
-            <dt>Trajectory</dt>
+            <dt>{r("trajectoryLabel")}</dt>
             <dd>
-              SOLO → <span className="em">STUDIO</span>
+              {r.rich("trajectoryValue", {
+                em: (chunks) => <span className="em">{chunks}</span>,
+              })}
             </dd>
           </div>
           <div>
-            <dt>Disciplines</dt>
-            <dd>WEB · APP · BRAND</dd>
+            <dt>{r("disciplinesLabel")}</dt>
+            <dd>{r("disciplinesValue")}</dd>
           </div>
           <div>
-            <dt>Operating Since</dt>
+            <dt>{r("operatingSinceLabel")}</dt>
             <dd>
-              2021 · <span className="em">Y4</span>
+              {r.rich("operatingSinceValue", {
+                em: (chunks) => <span className="em">{chunks}</span>,
+              })}
             </dd>
           </div>
           <div>
-            <dt>Coordinates</dt>
-            <dd>LAT 48.86° · LNG 2.34°</dd>
+            <dt>{r("coordinatesLabel")}</dt>
+            <dd>{r("coordinatesValue")}</dd>
           </div>
         </dl>
       </div>

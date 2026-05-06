@@ -1,0 +1,234 @@
+{
+  "Metadata": {
+    "title": "Kepler Industries – Studio für anspruchsvolle digitale Produkte",
+    "description": "Kepler Industries ist ein unabhängiges Kreativstudio, das klare, anspruchsvolle digitale Produkte entwirft und baut – Schnittstellen, Marken und Software am Rande des Möglichen.",
+    "ogTitle": "Kepler Industries – Studio für anspruchsvolle digitale Produkte",
+    "ogDescription": "Ein unabhängiges Studio, das digitale Produkte mit Sorgfalt, Geschmack und Weitblick entwirft und baut.",
+    "twitterDescription": "Studio für anspruchsvolle digitale Produkte. Web · App · Produkt."
+  },
+  "Nav": {
+    "homeAriaLabel": "Kepler Industries-Haus",
+    "primaryAriaLabel": "Primär",
+    "about": "Um",
+    "vision": "Vision",
+    "projects": "Projekte",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "cta": "Starten Sie ein Projekt"
+  },
+  "LanguageSwitcher": {
+    "label": "Sprache ändern"
+  },
+  "Hero": {
+    "screenLabel": "01 Held",
+    "bulletin": "K-01 / Studio Bulletin / 2026.05",
+    "openSlots": "Derzeit im Chart · 02 offene Plätze",
+    "titleLine1": "Darüber hinaus bauen",
+    "titleLine2": "der <em>bekannte Horizont.</em>",
+    "lede": "Kepler Industries ist ein Kreativstudio, das klare, anspruchsvolle digitale Produkte entwirft – Schnittstellen, Marken und Software am Rande des Möglichen.",
+    "viewProjects": "Projekte anzeigen",
+    "startProject": "Starten Sie ein Projekt",
+    "readout": {
+      "trajectoryLabel": "Flugbahn",
+      "trajectoryValue": "SOLO → <em>STUDIO</em>",
+      "disciplinesLabel": "Disziplinen",
+      "disciplinesValue": "WEB · APP · MARKE",
+      "operatingSinceLabel": "In Betrieb seit",
+      "operatingSinceValue": "2021 · <em>Y4</em>",
+      "coordinatesLabel": "Koordinaten",
+      "coordinatesValue": "LAT 48,86° · LNG 2,34°"
+    }
+  },
+  "About": {
+    "screenLabel": "02 Über",
+    "titleLine1": "Ein Studio, das aus geboren wurde",
+    "titleLine2": "<em>Neugier.</em>",
+    "metaNum": "— 02 / Über",
+    "metaDesc": "Eine persönliche Praxis, die sich zu einem seriösen Studio für raffiniertes, gezieltes digitales Handwerk entwickelte.",
+    "lead": "Kepler begann als Notizbuch eines Designers – ein Ort, an dem man ohne Erlaubnis Ideen nachjagte. Heute fungiert es als <em>fokussiertes Studio</em>, das jedes Jahr eine kleine Anzahl von Projekten übernimmt und jedem Pixel, jeder Eingabeaufforderung und jedem Produkt die gleiche obsessive Aufmerksamkeit widmet.",
+    "body1": "Wir arbeiten mit Gründern, Betreibern und Teams zusammen, denen wichtig ist, wie sich ihr Produkt anfühlt – und nicht nur, was es tut. Das Werk ist kleinvolumig, tiefgreifend in der Ausführung und eher vom Geschmack als vom Trend geprägt.",
+    "body2": "Was als persönliche Erkundung begann, hat sich zu einem Studio mit der Disziplin eines erfahrenen Teams und der Direktheit eines einzelnen Handwerkers entwickelt. Keine Zwischenhändler, keine Decks um der Decks willen – nur klares Denken, durchdachtes Design und saubere Ausführung.",
+    "stats": {
+      "yearsLabel": "Jahre im Orbit",
+      "productsLabel": "Produkte versendet",
+      "foundersLabel": "Gründer dienten",
+      "iterationsLabel": "Es verbleiben noch Iterationen"
+    }
+  },
+  "Vision": {
+    "screenLabel": "03 Vision",
+    "eyebrow": "03 / Philosophie",
+    "titleLine1": "Wir entwerfen für das, was ist",
+    "titleLine2": "<em>noch nicht hier.</em>",
+    "tags": {
+      "trajectory": "Flugbahn · 042",
+      "heat": "Wärmesignatur · Erkannt",
+      "coords": "Breite 48° · Lng 2°",
+      "status": "Status · Charting"
+    },
+    "principles": [
+      {
+        "num": "— Grundsatz 01",
+        "title": "Drücken Sie <em>weiter</em>.",
+        "body": "Komfort ist der Feind des Handwerks. Jedes Projekt ist eine Chance, die Linie zu erweitern – etwas zu schaffen, das ein bisschen raffinierter, ein bisschen gewagter ist als das, was es zuvor gab."
+      },
+      {
+        "num": "— Prinzip 02",
+        "title": "Bleiben Sie <em>präzise</em>.",
+        "body": "Ehrgeiz ohne Präzision ist Lärm. Wir kümmern uns um die Art, das Timing, den Abstand – denn der Unterschied zwischen gut und unvergesslich liegt im Detail."
+      },
+      {
+        "num": "— Grundsatz 03",
+        "title": "Bauen Sie <em>leise</em>.",
+        "body": "Die beste Arbeit kündigt sich nicht an. Wir entwerfen Produkte, die sich unvermeidlich anfühlen – ruhig, durchdacht und so gebaut, dass sie über den Markteinführungszyklus hinaus Bestand haben."
+      }
+    ]
+  },
+  "Projects": {
+    "screenLabel": "04 Projekte",
+    "titleLine1": "Ausgewählt",
+    "titleLine2": "<em>Arbeit.</em>",
+    "metaNum": "— 04 / Projekte · 2023–2026",
+    "metaDesc": "Eine kuratierte Sammlung aktueller Missionen. Jeder wird versendet, jeder wird nach den gleichen Studioprinzipien gestaltet.",
+    "items": [
+      {
+        "num": "001",
+        "prefix": "Atlas",
+        "emphasis": "Feld",
+        "type": "Marke · Web",
+        "year": "2026"
+      },
+      {
+        "num": "002",
+        "prefix": "Nordstern",
+        "emphasis": "Betriebssystem",
+        "type": "Produkt · Native App",
+        "year": "2025"
+      },
+      {
+        "num": "003",
+        "prefix": "Tessera",
+        "emphasis": "Audio",
+        "type": "Web · Identität",
+        "year": "2025"
+      },
+      {
+        "num": "004",
+        "prefix": "Caldera",
+        "emphasis": "Gesundheit",
+        "type": "Produkt · Designsystem",
+        "year": "2024"
+      },
+      {
+        "num": "005",
+        "prefix": "Wendel",
+        "emphasis": "Hauptstadt",
+        "type": "Marke · Marketing-Site",
+        "year": "2024"
+      },
+      {
+        "num": "006",
+        "prefix": "Meridian",
+        "emphasis": "Briefe",
+        "type": "Leitartikel · Web",
+        "year": "2023"
+      }
+    ]
+  },
+  "Services": {
+    "screenLabel": "05 Dienstleistungen",
+    "titleLine1": "Was wir",
+    "titleLine2": "<em>tun.</em>",
+    "metaNum": "— 05 / Dienstleistungen",
+    "metaDesc": "Drei Disziplinen, intensiv praktiziert. Solo oder in Kombination, End-to-End.",
+    "items": [
+      {
+        "num": "— 01",
+        "prefix": "Web",
+        "emphasis": "Design",
+        "body": "Marketingseiten, Produktseiten und interaktive Erlebnisse, die auf Klarheit und Wirkung ausgelegt sind. Strategie, Art Direction und Umsetzung in einem kontinuierlichen Kreislauf.",
+        "tags": [
+          "Art Direction",
+          "Webflow",
+          "Next.js",
+          "Bewegung"
+        ]
+      },
+      {
+        "num": "— 02",
+        "prefix": "App",
+        "emphasis": "Entwicklung",
+        "body": "Native und plattformübergreifende Apps, die mit der Disziplin eines internen Teams erstellt wurden. Vom ersten Prototyp bis hin zur produktionstauglichen Software, die so konzipiert ist, dass sie sich nativ in das Gerät einfügt.",
+        "tags": [
+          "iOS",
+          "SwiftUI",
+          "Native reagieren",
+          "Backend"
+        ]
+      },
+      {
+        "num": "— 03",
+        "prefix": "Produkt",
+        "emphasis": "Design",
+        "body": "Durchgängiges Produktdesign für Software, die ihren Platz verdient. Entdeckung, Systeme, Flüsse und Schnittstellen – konzipiert als ein einziger, betrachteter Organismus.",
+        "tags": [
+          "Designsysteme",
+          "UX-Forschung",
+          "Prototyping",
+          "Marke"
+        ]
+      }
+    ]
+  },
+  "Contact": {
+    "screenLabel": "06 Kontakt",
+    "eyebrow": "06 / Senden",
+    "titleLine1": "Lassen Sie uns etwas planen",
+    "titleLine2": "<em>neu.</em>",
+    "sub": "Erzählen Sie uns von dem Produkt, das Sie bauen möchten. Wir antworten innerhalb von zwei Werktagen – ohne Muster.",
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "Ada Lovelace",
+      "email": "E-Mail",
+      "emailPlaceholder": "ada@signal.io",
+      "scope": "Umfang",
+      "scopeOptions": [
+        "Webdesign",
+        "App-Entwicklung",
+        "Produktdesign",
+        "Volles Studio-Engagement"
+      ],
+      "message": "Missionsbrief",
+      "messagePlaceholder": "Ein paar Sätze darüber, was Sie bauen, wohin es geht und wann Sie es brauchen."
+    },
+    "submit": "Übertragen",
+    "transmitting": "· Sendesignal…",
+    "received": "✶ Signal empfangen. Antwort innerhalb von 48 Stunden."
+  },
+  "Footer": {
+    "tagline": "Ein unabhängiges Studio, das digitale Produkte mit Sorgfalt, Geschmack und Weitblick entwirft und baut.",
+    "studio": {
+      "title": "Studio",
+      "about": "Um",
+      "vision": "Vision",
+      "projects": "Projekte",
+      "services": "Dienstleistungen"
+    },
+    "connect": {
+      "title": "Verbinden",
+      "email": "hello@kepler-industries.com",
+      "arena": "Are.na",
+      "readcv": "Read.cv",
+      "twitter": "Twitter / X"
+    },
+    "signal": {
+      "title": "Signal",
+      "newsletter": "Newsletter – vierteljährlich",
+      "fieldNotes": "Feldnotizen",
+      "pressKit": "Pressemappe"
+    },
+    "copyright": "© 2026 Kepler Industries · Alle Rechte vorbehalten",
+    "coords": "48,8566° N · 2,3522° E",
+    "version": "v 1.04 / Build 2026·05"
+  }
+}

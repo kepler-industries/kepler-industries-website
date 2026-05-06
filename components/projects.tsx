@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 type Project = {
   num: string;
   prefix: string;
@@ -6,74 +8,31 @@ type Project = {
   year: string;
 };
 
-const PROJECTS: Project[] = [
-  {
-    num: "001",
-    prefix: "Atlas",
-    emphasis: "Field",
-    type: "Brand · Web",
-    year: "2026",
-  },
-  {
-    num: "002",
-    prefix: "Northstar",
-    emphasis: "OS",
-    type: "Product · Native App",
-    year: "2025",
-  },
-  {
-    num: "003",
-    prefix: "Tessera",
-    emphasis: "Audio",
-    type: "Web · Identity",
-    year: "2025",
-  },
-  {
-    num: "004",
-    prefix: "Caldera",
-    emphasis: "Health",
-    type: "Product · Design System",
-    year: "2024",
-  },
-  {
-    num: "005",
-    prefix: "Helix",
-    emphasis: "Capital",
-    type: "Brand · Marketing Site",
-    year: "2024",
-  },
-  {
-    num: "006",
-    prefix: "Meridian",
-    emphasis: "Letters",
-    type: "Editorial · Web",
-    year: "2023",
-  },
-];
+export async function Projects() {
+  const t = await getTranslations("Projects");
+  const items = t.raw("items") as Project[];
 
-export function Projects() {
+  const em = (chunks: React.ReactNode) => <em>{chunks}</em>;
+
   return (
     <section
       className="projects"
       id="projects"
-      data-screen-label="04 Projects"
+      data-screen-label={t("screenLabel")}
     >
       <div className="container">
         <div className="section-head">
           <h2>
-            Selected <em>work.</em>
+            {t("titleLine1")} {t.rich("titleLine2", { em })}
           </h2>
           <div className="meta">
-            <span className="num">— 04 / Projects · 2023–2026</span>
-            <p className="desc">
-              A curated set of recent missions. Each shipped, each shaped by
-              the same studio principles.
-            </p>
+            <span className="num">{t("metaNum")}</span>
+            <p className="desc">{t("metaDesc")}</p>
           </div>
         </div>
 
         <div className="project-list">
-          {PROJECTS.map((p) => (
+          {items.map((p) => (
             <a
               key={p.num}
               className="project"

@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 type Service = {
   num: string;
   prefix: string;
@@ -6,53 +8,31 @@ type Service = {
   tags: string[];
 };
 
-const SERVICES: Service[] = [
-  {
-    num: "— 01",
-    prefix: "Web",
-    emphasis: "Design",
-    body: "Marketing sites, product pages, and interactive experiences engineered for clarity and impact. Strategy, art direction, and implementation in one continuous loop.",
-    tags: ["Art Direction", "Webflow", "Next.js", "Motion"],
-  },
-  {
-    num: "— 02",
-    prefix: "App",
-    emphasis: "Development",
-    body: "Native and cross-platform apps built with the discipline of an in-house team. From first prototype to production-grade software, designed to feel native to the device.",
-    tags: ["iOS", "SwiftUI", "React Native", "Backend"],
-  },
-  {
-    num: "— 03",
-    prefix: "Product",
-    emphasis: "Design",
-    body: "End-to-end product design for software that earns its place. Discovery, systems, flows and interfaces — designed as a single, considered organism.",
-    tags: ["Design Systems", "UX Research", "Prototyping", "Brand"],
-  },
-];
+export async function Services() {
+  const t = await getTranslations("Services");
+  const items = t.raw("items") as Service[];
 
-export function Services() {
+  const em = (chunks: React.ReactNode) => <em>{chunks}</em>;
+
   return (
     <section
       className="services"
       id="services"
-      data-screen-label="05 Services"
+      data-screen-label={t("screenLabel")}
     >
       <div className="container">
         <div className="section-head">
           <h2>
-            What we <em>do.</em>
+            {t("titleLine1")} {t.rich("titleLine2", { em })}
           </h2>
           <div className="meta">
-            <span className="num">— 05 / Services</span>
-            <p className="desc">
-              Three disciplines, deeply practiced. Engaged solo or in
-              combination, end-to-end.
-            </p>
+            <span className="num">{t("metaNum")}</span>
+            <p className="desc">{t("metaDesc")}</p>
           </div>
         </div>
 
         <div className="services-grid">
-          {SERVICES.map((s) => (
+          {items.map((s) => (
             <div className="service" key={s.num}>
               <div className="s-num">{s.num}</div>
               <h3 className="s-title">
@@ -60,9 +40,9 @@ export function Services() {
               </h3>
               <p className="s-body">{s.body}</p>
               <div className="s-tags">
-                {s.tags.map((t) => (
-                  <span className="s-tag" key={t}>
-                    {t}
+                {s.tags.map((tag) => (
+                  <span className="s-tag" key={tag}>
+                    {tag}
                   </span>
                 ))}
               </div>

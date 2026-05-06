@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { BrandLink } from "./brand-mark";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function Nav() {
+  const t = useTranslations("Nav");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,18 +18,21 @@ export function Nav() {
 
   return (
     <header className={`nav${scrolled ? " scrolled" : ""}`} id="nav">
-      <BrandLink href="#" ariaLabel="Kepler Industries home" />
-      <nav className="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#vision">Vision</a>
-        <a href="#projects">Projects</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <BrandLink href="#" ariaLabel={t("homeAriaLabel")} />
+      <nav className="nav-links" aria-label={t("primaryAriaLabel")}>
+        <a href="#about">{t("about")}</a>
+        <a href="#vision">{t("vision")}</a>
+        <a href="#projects">{t("projects")}</a>
+        <a href="#services">{t("services")}</a>
+        <a href="#contact">{t("contact")}</a>
       </nav>
-      <a href="#contact" className="nav-cta">
-        <span className="dot" />
-        Start a Project
-      </a>
+      <div className="nav-tools">
+        <LanguageSwitcher />
+        <a href="#contact" className="nav-cta">
+          <span className="dot" />
+          {t("cta")}
+        </a>
+      </div>
     </header>
   );
 }
