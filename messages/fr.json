@@ -88,15 +88,15 @@
     "screenLabel": "04 Projets",
     "titleLine1": "Travaux",
     "titleLine2": "<em>sélectionnés.</em>",
-    "metaNum": "— 04 / Projets · 2023–2026",
-    "metaDesc": "Une sélection de missions récentes. Toutes livrées, toutes façonnées par les mêmes principes du studio.",
+    "metaNum": "— 04 / Projets · 2025–2026",
+    "metaDesc": "Une sélection de missions en cours et de travaux à venir — toutes façonnées par les mêmes principes du studio.",
     "items": [
-      { "num": "001", "prefix": "Atlas", "emphasis": "Field", "type": "Identité · Web", "year": "2026" },
-      { "num": "002", "prefix": "Northstar", "emphasis": "OS", "type": "Produit · App native", "year": "2025" },
-      { "num": "003", "prefix": "Tessera", "emphasis": "Audio", "type": "Web · Identité", "year": "2025" },
-      { "num": "004", "prefix": "Caldera", "emphasis": "Health", "type": "Produit · Design System", "year": "2024" },
-      { "num": "005", "prefix": "Helix", "emphasis": "Capital", "type": "Identité · Site marketing", "year": "2024" },
-      { "num": "006", "prefix": "Meridian", "emphasis": "Letters", "type": "Éditorial · Web", "year": "2023" }
+      { "num": "001", "prefix": "Powr", "emphasis": "App", "type": "Santé · App mobile", "year": "2025" },
+      { "num": "002", "prefix": "Diet", "emphasis": "Kit", "type": "Nutrition · App mobile", "year": "2026" },
+      { "num": "003", "prefix": "Kepler", "emphasis": "Orbit", "type": "Gaming · App desktop", "year": "2026" },
+      { "num": "004", "prefix": "Projet", "emphasis": "Nova", "type": "En studio · À venir", "year": "2026" },
+      { "num": "005", "prefix": "Projet", "emphasis": "Aurora", "type": "En studio · À venir", "year": "2026" },
+      { "num": "006", "prefix": "Projet", "emphasis": "Pulsar", "type": "En studio · À venir", "year": "2026" }
     ]
   },
   "Services": {
