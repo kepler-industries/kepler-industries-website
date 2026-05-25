@@ -50,8 +50,8 @@
     "body2": "Ce qui a commencé comme une exploration personnelle a mûri en un studio doté de la discipline d'une équipe senior et de la franchise d'un seul artisan. Pas d'intermédiaires, pas de présentations pour le plaisir des présentations — juste une pensée claire, un design réfléchi et une exécution propre.",
     "stats": {
       "yearsLabel": "Années en orbite",
-      "productsLabel": "Produits livrés",
-      "foundersLabel": "Fondateurs accompagnés",
+      "missionsLabel": "Missions en cours",
+      "tonguesLabel": "Langues parlées",
       "iterationsLabel": "Itérations restantes"
     }
   },
@@ -91,9 +91,9 @@
     "metaNum": "— 04 / Projets · 2025–2026",
     "metaDesc": "Une sélection de missions en cours et de travaux à venir — toutes façonnées par les mêmes principes du studio.",
     "items": [
-      { "num": "001", "prefix": "Powr", "emphasis": "App", "type": "Santé · App mobile", "year": "2025" },
-      { "num": "002", "prefix": "Diet", "emphasis": "Kit", "type": "Nutrition · App mobile", "year": "2026" },
-      { "num": "003", "prefix": "Kepler", "emphasis": "Orbit", "type": "Gaming · App desktop", "year": "2026" },
+      { "num": "001", "prefix": "Powr", "emphasis": "App", "type": "Santé · App mobile", "year": "2025", "url": "https://powr-app.com" },
+      { "num": "002", "prefix": "Diet", "emphasis": "Kit", "type": "Nutrition · App mobile", "year": "2026", "url": "https://dietkit.kepler-industries.com" },
+      { "num": "003", "prefix": "Kepler", "emphasis": "Orbit", "type": "Gaming · App desktop", "year": "2026", "url": "https://orbit.kepler-industries.com" },
       { "num": "004", "prefix": "Projet", "emphasis": "Nova", "type": "En studio · À venir", "year": "2026" },
       { "num": "005", "prefix": "Projet", "emphasis": "Aurora", "type": "En studio · À venir", "year": "2026" },
       { "num": "006", "prefix": "Projet", "emphasis": "Pulsar", "type": "En studio · À venir", "year": "2026" }

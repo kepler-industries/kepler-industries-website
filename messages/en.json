@@ -50,8 +50,8 @@
     "body2": "What started as personal exploration has matured into a studio with the discipline of a senior team and the directness of a single craftsman. No middlemen, no decks-for-the-sake-of-decks — just clear thinking, considered design, and clean execution.",
     "stats": {
       "yearsLabel": "Years in orbit",
-      "productsLabel": "Products shipped",
-      "foundersLabel": "Founders served",
+      "missionsLabel": "Active missions",
+      "tonguesLabel": "Tongues spoken",
       "iterationsLabel": "Iterations remaining"
     }
   },
@@ -91,9 +91,9 @@
     "metaNum": "— 04 / Projects · 2025–2026",
     "metaDesc": "A curated set of current missions and upcoming work — each shaped by the same studio principles.",
     "items": [
-      { "num": "001", "prefix": "Powr", "emphasis": "App", "type": "Health · Mobile App", "year": "2025" },
-      { "num": "002", "prefix": "Diet", "emphasis": "Kit", "type": "Nutrition · Mobile App", "year": "2026" },
-      { "num": "003", "prefix": "Kepler", "emphasis": "Orbit", "type": "Gaming · Desktop App", "year": "2026" },
+      { "num": "001", "prefix": "Powr", "emphasis": "App", "type": "Health · Mobile App", "year": "2025", "url": "https://powr-app.com" },
+      { "num": "002", "prefix": "Diet", "emphasis": "Kit", "type": "Nutrition · Mobile App", "year": "2026", "url": "https://dietkit.kepler-industries.com" },
+      { "num": "003", "prefix": "Kepler", "emphasis": "Orbit", "type": "Gaming · Desktop App", "year": "2026", "url": "https://orbit.kepler-industries.com" },
       { "num": "004", "prefix": "Project", "emphasis": "Nova", "type": "In studio · TBA", "year": "2026" },
       { "num": "005", "prefix": "Project", "emphasis": "Aurora", "type": "In studio · TBA", "year": "2026" },
       { "num": "006", "prefix": "Project", "emphasis": "Pulsar", "type": "In studio · TBA", "year": "2026" }

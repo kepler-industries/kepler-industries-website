@@ -30,19 +30,19 @@ export async function About() {
         <div className="about-stats">
           <div className="about-stat">
             <div className="num">
-              <em>04</em>
+              <em>01</em>
             </div>
             <div className="lbl">{s("yearsLabel")}</div>
           </div>
           <div className="about-stat">
-            <div className="num">42</div>
-            <div className="lbl">{s("productsLabel")}</div>
+            <div className="num">03</div>
+            <div className="lbl">{s("missionsLabel")}</div>
           </div>
           <div className="about-stat">
             <div className="num">
-              <em>11</em>
+              <em>05</em>
             </div>
-            <div className="lbl">{s("foundersLabel")}</div>
+            <div className="lbl">{s("tonguesLabel")}</div>
           </div>
           <div className="about-stat">
             <div className="num">∞</div>

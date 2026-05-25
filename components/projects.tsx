@@ -6,6 +6,7 @@ type Project = {
   emphasis: string;
   type: string;
   year: string;
+  url?: string;
 };
 
 export async function Projects() {
@@ -36,7 +37,10 @@ export async function Projects() {
             <a
               key={p.num}
               className="project"
-              href="#"
+              href={p.url ?? "#"}
+              target={p.url ? "_blank" : undefined}
+              rel={p.url ? "noopener noreferrer" : undefined}
+              aria-disabled={p.url ? undefined : true}
               aria-label={`${p.prefix} ${p.emphasis}`}
             >
               <span className="pnum">{p.num}</span>
