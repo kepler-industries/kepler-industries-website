@@ -120,6 +120,7 @@ img {
 .brand-mark {
   width: 26px;
   height: 26px;
+  color: var(--ink);
   position: relative;
   display: grid;
   place-items: center;

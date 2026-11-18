@@ -33,7 +33,14 @@ export default async function Image() {
             fontFamily: "sans-serif",
           }}
         >
-          <span>K-01 · Kepler Industries</span>
+          <span style={{ display: "flex", alignItems: "center", gap: 18 }}>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="#f4eee5">
+              <rect x="3.5" y="3" width="3.6" height="18" />
+              <path d="M9.4 10.6 16.8 3h4.4l-7.4 7.6z" />
+              <path d="M11.2 12.4h4.4l5.6 8.6h-4.4z" />
+            </svg>
+            K-01 · Kepler Industries
+          </span>
           <span>EST. 2021</span>
         </div>
 
