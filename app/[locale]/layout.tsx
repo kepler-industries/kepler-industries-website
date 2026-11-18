@@ -27,11 +27,8 @@ const instrumentSerif = Instrument_Serif({
 const BASE_URL = "https://www.kepler-industries.com";
 
 const OG_LOCALES: Record<Locale, string> = {
-  en: "en_US",
   fr: "fr_FR",
-  es: "es_ES",
-  it: "it_IT",
-  de: "de_DE",
+  en: "en_US",
 };
 
 type LayoutProps = {
@@ -46,10 +43,7 @@ export function generateStaticParams() {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#07060a" },
-    { media: "(prefers-color-scheme: light)", color: "#07060a" },
-  ],
+  themeColor: "#000000",
   colorScheme: "dark",
 };
 
@@ -91,24 +85,22 @@ export async function generateMetadata({
     referrer: "origin-when-cross-origin",
     keywords: [
       "Kepler Industries",
-      "Kepler Studio",
-      "creative studio",
-      "digital product studio",
-      "web design studio",
-      "app development studio",
-      "product design",
-      "brand design",
-      "design system",
-      "UX design",
-      "UI design",
-      "Next.js studio",
-      "React studio",
-      "independent design studio",
+      "studio de développement",
+      "développement d'application mobile",
+      "application iOS",
+      "application Android",
+      "création de site web",
+      "logiciel sur mesure",
+      "React Native",
+      "Next.js",
+      "agence web France",
+      "mobile app development",
+      "custom software",
     ],
     authors: [{ name: "Kepler Industries", url: BASE_URL }],
     creator: "Kepler Industries",
     publisher: "Kepler Industries",
-    category: "design",
+    category: "technology",
     formatDetection: {
       email: false,
       address: false,
@@ -131,14 +123,14 @@ export async function generateMetadata({
           url: "/opengraph-image",
           width: 1200,
           height: 630,
-          alt: "Kepler Industries — Studio for ambitious digital products",
+          alt: t("ogAlt"),
           type: "image/png",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: t("title"),
+      title: t("ogTitle"),
       description: t("twitterDescription"),
       creator: "@keplerindustries",
       site: "@keplerindustries",
@@ -147,7 +139,7 @@ export async function generateMetadata({
           url: "/twitter-image",
           width: 1200,
           height: 630,
-          alt: "Kepler Industries — Studio for ambitious digital products",
+          alt: t("ogAlt"),
         },
       ],
     },
@@ -162,10 +154,6 @@ export async function generateMetadata({
         "max-image-preview": "large",
         "max-snippet": -1,
       },
-    },
-    verification: {
-      // Add Google Search Console verification token here once available:
-      // google: "your-token-here",
     },
   };
 }
@@ -184,7 +172,16 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        {/* Active les animations d'apparition seulement si le JS tourne. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
+      </head>
       <body>
         <JsonLd
           locale={locale}

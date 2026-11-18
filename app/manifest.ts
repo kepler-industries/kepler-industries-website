@@ -5,14 +5,14 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Kepler Industries",
     short_name: "Kepler",
     description:
-      "Kepler Industries is an independent creative studio designing and building clean, ambitious digital products — interfaces, brands and software at the edge of what's possible.",
+      "Kepler Industries conçoit et développe des applications mobiles, des sites web et des logiciels sur mesure.",
     start_url: "/",
     scope: "/",
     display: "standalone",
-    background_color: "#07060a",
-    theme_color: "#07060a",
-    categories: ["design", "business", "productivity"],
-    lang: "en",
+    background_color: "#000000",
+    theme_color: "#000000",
+    categories: ["business", "productivity"],
+    lang: "fr",
     icons: [
       {
         src: "/kepler.png",

@@ -1,54 +1,47 @@
+import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
+import { Tile } from "./icons";
 
-type Service = {
-  num: string;
-  prefix: string;
-  emphasis: string;
-  body: string;
-  tags: string[];
+type Service = { id: string; title: string; body: string; points: string[] };
+
+const ACCENTS: Record<string, string> = {
+  mobile: "#8b7cf6",
+  web: "#5b8cff",
+  software: "#38d6f0",
+  care: "#4ade80",
 };
 
 export async function Services() {
   const t = await getTranslations("Services");
   const items = t.raw("items") as Service[];
-
-  const em = (chunks: React.ReactNode) => <em>{chunks}</em>;
+  const hl = (chunks: React.ReactNode) => <span className="hl">{chunks}</span>;
 
   return (
-    <section
-      className="services"
-      id="services"
-      data-screen-label={t("screenLabel")}
-    >
-      <div className="container">
-        <div className="section-head">
-          <h2>
-            {t("titleLine1")} {t.rich("titleLine2", { em })}
-          </h2>
-          <div className="meta">
-            <span className="num">{t("metaNum")}</span>
-            <p className="desc">{t("metaDesc")}</p>
-          </div>
-        </div>
+    <section className="section" id="services">
+      <header className="section-head reveal">
+        <Tile glyph="layers" accent="#5b8cff" />
+        <span className="eyebrow">{t("eyebrow")}</span>
+        <h2 className="h2 grad">{t.rich("title", { hl })}</h2>
+        <p className="lede">{t("sub")}</p>
+      </header>
 
-        <div className="services-grid">
-          {items.map((s) => (
-            <div className="service" key={s.num}>
-              <div className="s-num">{s.num}</div>
-              <h3 className="s-title">
-                {s.prefix} <em>{s.emphasis}</em>
-              </h3>
-              <p className="s-body">{s.body}</p>
-              <div className="s-tags">
-                {s.tags.map((tag) => (
-                  <span className="s-tag" key={tag}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="services-grid">
+        {items.map((s, i) => (
+          <article
+            key={s.id}
+            className="card service reveal"
+            style={{ "--d": `${i * 80}ms` } as CSSProperties}
+          >
+            <Tile glyph={s.id} accent={ACCENTS[s.id]} size="md" />
+            <h3>{s.title}</h3>
+            <p>{s.body}</p>
+            <ul className="tags">
+              {s.points.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );

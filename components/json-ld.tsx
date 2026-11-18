@@ -17,7 +17,7 @@ export function JsonLd({ locale, name, description }: Props) {
     "@type": "Organization",
     "@id": `${BASE_URL}/#organization`,
     name: "Kepler Industries",
-    alternateName: ["Kepler", "Kepler Studio"],
+    alternateName: ["Kepler"],
     url: BASE_URL,
     logo: {
       "@type": "ImageObject",
@@ -31,22 +31,22 @@ export function JsonLd({ locale, name, description }: Props) {
     image: { "@id": `${BASE_URL}/#logo` },
     description,
     foundingDate: "2021",
-    slogan: "Building beyond the known horizon.",
+    slogan: "Du concept au code.",
     knowsAbout: [
-      "Web Design",
-      "App Development",
-      "Product Design",
-      "Brand Design",
-      "Design Systems",
-      "User Experience",
-      "User Interface Design",
+      "Développement d'applications mobiles",
+      "Développement web",
+      "Logiciels sur mesure",
+      "Design produit",
+      "React Native",
+      "Next.js",
     ],
+    sameAs: ["https://github.com/kepler-industries"],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: "hello@kepler-industries.com",
-      availableLanguage: ["English", "French", "Spanish", "Italian", "German"],
-      areaServed: "Worldwide",
+      availableLanguage: ["French", "English"],
+      areaServed: "FR",
     },
     address: {
       "@type": "PostalAddress",
@@ -60,7 +60,6 @@ export function JsonLd({ locale, name, description }: Props) {
     "@id": `${BASE_URL}/#website`,
     url: BASE_URL,
     name: "Kepler Industries",
-    alternateName: "Kepler",
     description,
     inLanguage: routing.locales,
     publisher: { "@id": `${BASE_URL}/#organization` },
@@ -87,38 +86,46 @@ export function JsonLd({ locale, name, description }: Props) {
     description,
     url: BASE_URL,
     image: `${BASE_URL}/kepler.png`,
-    priceRange: "$$$",
-    areaServed: "Worldwide",
+    areaServed: "FR",
     parentOrganization: { "@id": `${BASE_URL}/#organization` },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Studio Services",
+      name: "Services du studio",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Web Design",
+            name: "Applications mobiles",
             description:
-              "Marketing sites, product pages, and interactive experiences engineered for clarity and impact.",
+              "Applications iOS et Android, de la maquette à la publication sur l'App Store et Google Play.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "App Development",
+            name: "Sites & plateformes web",
             description:
-              "Native and cross-platform apps from first prototype to production-grade software.",
+              "Sites vitrines, plateformes SaaS, espaces clients et back-offices sur mesure.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Product Design",
+            name: "Logiciels sur mesure",
             description:
-              "End-to-end product design — discovery, systems, flows and interfaces designed as one organism.",
+              "API, outils métier, automatisations, intégrations IA et applications desktop.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Hébergement & suivi",
+            description:
+              "Mise en ligne, supervision, sauvegardes et maintenance des produits livrés.",
           },
         },
       ],

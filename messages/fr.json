@@ -1,183 +1,263 @@
 {
   "Metadata": {
-    "title": "Kepler Industries — Studio pour produits numériques ambitieux",
-    "description": "Kepler Industries est un studio créatif indépendant qui conçoit et développe des produits numériques épurés et ambitieux — interfaces, identités et logiciels à la frontière du possible.",
-    "ogTitle": "Kepler Industries — Studio pour produits numériques ambitieux",
-    "ogDescription": "Un studio indépendant qui conçoit et construit des produits numériques avec soin, goût et une vision à long terme.",
-    "twitterDescription": "Studio pour produits numériques ambitieux. Web · App · Produit."
+    "title": "Kepler Industries — Studio de conception d'apps, de sites et de logiciels sur mesure",
+    "description": "Kepler Industries conçoit et développe des applications mobiles, des sites web et des logiciels sur mesure pour les entreprises. Un seul interlocuteur, de la première maquette à la mise en production.",
+    "ogTitle": "Kepler Industries — Du concept au code",
+    "ogDescription": "Applications iOS & Android, sites web et logiciels métier, conçus et développés sur mesure par un studio indépendant.",
+    "twitterDescription": "Applications mobiles, sites et logiciels sur mesure. Du concept au code.",
+    "ogAlt": "Kepler Industries — Du concept au code"
   },
   "Nav": {
     "homeAriaLabel": "Accueil Kepler Industries",
-    "primaryAriaLabel": "Principal",
-    "about": "À propos",
-    "vision": "Vision",
+    "primaryAriaLabel": "Navigation principale",
     "projects": "Projets",
     "services": "Services",
+    "process": "Méthode",
     "contact": "Contact",
-    "cta": "Démarrer un projet"
+    "cta": "Démarrer un projet",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
   },
   "LanguageSwitcher": {
-    "label": "Changer de langue"
+    "label": "Langue du site"
   },
   "Hero": {
-    "screenLabel": "01 Hero",
-    "bulletin": "K-01 / Bulletin du Studio / 2026.05",
-    "openSlots": "Cartographie en cours · 02 créneaux disponibles",
-    "titleLine1": "Construire au-delà",
-    "titleLine2": "de l''<em>horizon connu.</em>",
-    "lede": "Kepler Industries est un studio créatif qui conçoit des produits numériques épurés et ambitieux — interfaces, identités et logiciels à la frontière du possible.",
-    "viewProjects": "Voir les projets",
-    "startProject": "Démarrer un projet",
-    "readout": {
-      "trajectoryLabel": "Trajectoire",
-      "trajectoryValue": "SOLO → <em>STUDIO</em>",
-      "disciplinesLabel": "Disciplines",
-      "disciplinesValue": "WEB · APP · IDENTITÉ",
-      "operatingSinceLabel": "En activité depuis",
-      "operatingSinceValue": "2021 · <em>A4</em>",
-      "coordinatesLabel": "Coordonnées",
-      "coordinatesValue": "LAT 48,86° · LNG 2,34°"
-    }
+    "badge": "Powr est en bêta sur l'App Store et Google Play",
+    "titleLine1": "Du concept",
+    "titleLine2": "au code.",
+    "lede": "Kepler Industries conçoit et développe des applications mobiles, des sites et des logiciels sur mesure. Un seul interlocuteur, de la première maquette à la mise en production.",
+    "primary": "Démarrer un projet",
+    "secondary": "Voir les projets",
+    "platforms": "iOS · Android · Web · Desktop"
   },
-  "About": {
-    "screenLabel": "02 À propos",
-    "titleLine1": "Un studio né de la",
-    "titleLine2": "<em>curiosité.</em>",
-    "metaNum": "— 02 / À propos",
-    "metaDesc": "Une pratique personnelle devenue un studio sérieux, dédié à un design numérique raffiné et intentionnel.",
-    "lead": "Kepler a commencé comme le carnet d'un designer — un lieu pour poursuivre des idées sans demander la permission. Aujourd'hui, c'est un <em>studio concentré</em>, qui prend en charge un nombre restreint de projets chaque année et porte la même attention obsessionnelle à chaque pixel, chaque prompt, chaque produit.",
-    "body1": "Nous travaillons avec des fondateurs, des opérateurs et des équipes qui se soucient de la sensation de leur produit — pas seulement de ce qu'il fait. Le travail est modeste en volume, profond dans l'exécution, et façonné par le goût plutôt que par la tendance.",
-    "body2": "Ce qui a commencé comme une exploration personnelle a mûri en un studio doté de la discipline d'une équipe senior et de la franchise d'un seul artisan. Pas d'intermédiaires, pas de présentations pour le plaisir des présentations — juste une pensée claire, un design réfléchi et une exécution propre.",
-    "stats": {
-      "yearsLabel": "Années en orbite",
-      "missionsLabel": "Missions en cours",
-      "tonguesLabel": "Langues parlées",
-      "iterationsLabel": "Itérations restantes"
-    }
-  },
-  "Vision": {
-    "screenLabel": "03 Vision",
-    "eyebrow": "03 / Philosophie",
-    "titleLine1": "Nous concevons ce qui",
-    "titleLine2": "<em>n'existe pas encore.</em>",
-    "tags": {
-      "trajectory": "Trajectoire · 042",
-      "heat": "Signature thermique · Détectée",
-      "coords": "Lat 48° · Lng 2°",
-      "status": "Statut · Cartographie"
-    },
-    "principles": [
-      {
-        "num": "— Principe 01",
-        "title": "Aller <em>plus loin</em>.",
-        "body": "Le confort est l'ennemi du métier. Chaque projet est l'occasion de prolonger la ligne — de créer quelque chose d'un peu plus raffiné, d'un peu plus audacieux, que ce qui l'a précédé."
-      },
-      {
-        "num": "— Principe 02",
-        "title": "Rester <em>précis</em>.",
-        "body": "L'ambition sans précision n'est que bruit. Nous soignons la typographie, le rythme, l'espacement — car la différence entre le bon et l'inoubliable se loge dans les détails."
-      },
-      {
-        "num": "— Principe 03",
-        "title": "Bâtir <em>en silence</em>.",
-        "body": "Les meilleurs produits ne s'annoncent pas. Nous concevons des produits qui semblent évidents — calmes, réfléchis et faits pour durer bien au-delà du lancement."
-      }
-    ]
+  "Stack": {
+    "label": "Une stack moderne, éprouvée en production"
   },
   "Projects": {
-    "screenLabel": "04 Projets",
-    "titleLine1": "Travaux",
-    "titleLine2": "<em>sélectionnés.</em>",
-    "metaNum": "— 04 / Projets · 2025–2026",
-    "metaDesc": "Une sélection de missions en cours et de travaux à venir — toutes façonnées par les mêmes principes du studio.",
+    "eyebrow": "Projets",
+    "title": "Ce qu'on a <hl>construit</hl>",
+    "sub": "Applications publiées sur les stores, plateformes en production, sites clients et produits en cours : tout est conçu, codé et maintenu par le studio.",
+    "visit": "Voir le site",
+    "moreTitle": "Et aussi",
     "items": [
-      { "num": "001", "prefix": "Powr", "emphasis": "App", "type": "Santé · App mobile", "year": "2025", "url": "https://powr-app.com" },
-      { "num": "002", "prefix": "Diet", "emphasis": "Kit", "type": "Nutrition · App mobile", "year": "2026", "url": "https://dietkit.kepler-industries.com" },
-      { "num": "003", "prefix": "Kepler", "emphasis": "Orbit", "type": "Gaming · App desktop", "year": "2026", "url": "https://orbit.kepler-industries.com" },
-      { "num": "004", "prefix": "Projet", "emphasis": "Nova", "type": "En studio · À venir", "year": "2026" },
-      { "num": "005", "prefix": "Projet", "emphasis": "Aurora", "type": "En studio · À venir", "year": "2026" },
-      { "num": "006", "prefix": "Projet", "emphasis": "Pulsar", "type": "En studio · À venir", "year": "2026" }
+      {
+        "id": "powr",
+        "name": "Powr",
+        "category": "Application mobile · iOS & Android",
+        "status": "En bêta sur les stores",
+        "description": "Le carnet d'entraînement de musculation : programmes sur mesure, chaque série enregistrée, suggestions de progression et carte du volume par muscle. Abonnement Powr Plus intégré."
+      },
+      {
+        "id": "rituel",
+        "name": "Rituel",
+        "category": "Fidélité · Apple & Google Wallet",
+        "status": "En développement",
+        "description": "La carte de fidélité des commerces de proximité, directement dans le Wallet du client, sans application à installer. Le commerçant tamponne la carte depuis une simple web app."
+      },
+      {
+        "id": "orbit",
+        "name": "Kepler Orbit",
+        "category": "Plateforme de jeux · Windows",
+        "status": "En ligne",
+        "description": "Le launcher desktop du studio : installation et mises à jour des jeux et modpacks, comptes joueurs, actualités et thèmes pilotés depuis un panel d'administration."
+      },
+      {
+        "id": "littoral",
+        "name": "Littoral Food",
+        "category": "Livraison de repas · iOS",
+        "status": "En développement",
+        "description": "Une plateforme de livraison complète — app client, app restaurant et app livreur — avec le suivi de commande en direct sur l'écran verrouillé de l'iPhone."
+      },
+      {
+        "id": "business",
+        "name": "Kepler Business",
+        "category": "Logiciel métier · Web",
+        "status": "En production",
+        "description": "L'espace client du studio : devis signés en ligne, factures, contrats, abonnements et surveillance des sites. Pilotable depuis une IA grâce à son serveur MCP."
+      },
+      {
+        "id": "saunactiv",
+        "name": "Saun'Activ Océan",
+        "category": "Site vitrine · Client",
+        "status": "En ligne",
+        "description": "Le site d'une activité d'aquagym, de longe-côte et de sauna face à la mer, dans les Côtes-d'Armor : séances, plages, location de sauna et événements sur mesure."
+      }
+    ],
+    "more": [
+      {
+        "id": "qlp",
+        "name": "Que les Potes",
+        "status": "En développement",
+        "description": "Une app iOS pour décrocher du scroll : on garde les stories et les messages de ses amis, on retire les Reels, les Shorts et les fils infinis."
+      },
+      {
+        "id": "star",
+        "name": "Star Academy Rebirth",
+        "status": "En développement",
+        "description": "Un serveur Cobblemon et ses mods sur mesure : quêtes, ligue d'arènes, casino et studio d'animations, reliés à une API dédiée."
+      },
+      {
+        "id": "empowered",
+        "name": "Empowered",
+        "status": "En développement",
+        "description": "Une app iOS de force athlétique — squat, développé couché, soulevé de terre — qui calcule chaque charge et se connecte à Claude."
+      },
+      {
+        "id": "flux",
+        "name": "Flux",
+        "status": "Prototype",
+        "description": "Un suivi de dépenses local-first : comptes virtuels, dépenses récurrentes et budgets par catégorie, sans connexion bancaire."
+      }
     ]
   },
+  "Mocks": {
+    "powr": {
+      "program": "Push · Semaine 3",
+      "exercise": "Développé couché",
+      "rest": "Repos",
+      "done": "Validée",
+      "volume": "Volume de la semaine"
+    },
+    "rituel": {
+      "shop": "Boulangerie du Port",
+      "card": "Carte de fidélité",
+      "reward": "Encore 3 passages pour un café offert"
+    },
+    "orbit": {
+      "library": "Bibliothèque",
+      "news": "Actualités",
+      "play": "Jouer",
+      "update": "Mise à jour"
+    },
+    "littoral": {
+      "date": "mercredi 18 novembre",
+      "status": "En route vers vous",
+      "eta": "Arrivée dans 8 min"
+    },
+    "business": {
+      "title": "Vue d'ensemble",
+      "quote": "Devis signé",
+      "invoice": "Facture payée",
+      "contract": "Contrat envoyé",
+      "uptime": "Site en ligne"
+    },
+    "saunactiv": {
+      "title": "Aquagym & longe-côte,",
+      "accent": "face à l'océan",
+      "cta": "Les séances en mer"
+    }
+  },
   "Services": {
-    "screenLabel": "05 Services",
-    "titleLine1": "Ce que nous",
-    "titleLine2": "<em>faisons.</em>",
-    "metaNum": "— 05 / Services",
-    "metaDesc": "Trois disciplines, profondément pratiquées. Engagées seules ou combinées, de bout en bout.",
+    "eyebrow": "Services",
+    "title": "Ce qu'on <hl>fait</hl>",
+    "sub": "Quatre métiers, un seul interlocuteur. On intervient sur tout le cycle de vie du produit, ou seulement là où vous en avez besoin.",
     "items": [
       {
-        "num": "— 01",
-        "prefix": "Web",
-        "emphasis": "Design",
-        "body": "Sites marketing, pages produits et expériences interactives conçus pour la clarté et l'impact. Stratégie, direction artistique et implémentation dans une seule boucle continue.",
-        "tags": ["Direction artistique", "Webflow", "Next.js", "Motion"]
+        "id": "mobile",
+        "title": "Applications mobiles",
+        "body": "iOS et Android, de la maquette à la publication sur les stores. Abonnements, notifications, Live Activities et cartes Wallet.",
+        "points": ["React Native & Expo", "Swift", "App Store & Google Play"]
       },
       {
-        "num": "— 02",
-        "prefix": "App",
-        "emphasis": "Development",
-        "body": "Applications natives et multi-plateformes construites avec la discipline d'une équipe interne. Du premier prototype au logiciel de production, conçues pour se fondre dans l'appareil.",
-        "tags": ["iOS", "SwiftUI", "React Native", "Backend"]
+        "id": "web",
+        "title": "Sites & plateformes web",
+        "body": "Sites vitrines rapides et bien référencés, plateformes SaaS, espaces clients et back-offices sur mesure.",
+        "points": ["Next.js", "Référencement", "Espaces clients"]
       },
       {
-        "num": "— 03",
-        "prefix": "Product",
-        "emphasis": "Design",
-        "body": "Design produit de bout en bout pour des logiciels qui méritent leur place. Découverte, systèmes, parcours et interfaces — conçus comme un seul organisme considéré.",
-        "tags": ["Design Systems", "Recherche UX", "Prototypage", "Identité"]
+        "id": "software",
+        "title": "Logiciels sur mesure",
+        "body": "API, outils métier, automatisations et intégrations IA. Des applications desktop quand le navigateur ne suffit plus.",
+        "points": ["API & back-end", "Desktop", "IA & MCP"]
+      },
+      {
+        "id": "care",
+        "title": "Hébergement & suivi",
+        "body": "Mise en ligne, supervision, sauvegardes et évolutions. Devis, factures et suivi centralisés dans votre espace client.",
+        "points": ["Supervision", "Maintenance", "Espace client"]
       }
+    ]
+  },
+  "Process": {
+    "eyebrow": "Méthode",
+    "title": "Comment on <hl>travaille</hl>",
+    "sub": "Un cadre simple et transparent, pour que vous gardiez la main à chaque étape.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Cadrage",
+        "body": "Un premier échange pour comprendre votre besoin, puis un cahier des charges clair et un devis détaillé, à signer en ligne.",
+        "meta": "Appel · Cahier des charges · Devis"
+      },
+      {
+        "num": "02",
+        "title": "Design",
+        "body": "Maquettes et prototype interactif : vous validez les parcours et l'interface avant la première ligne de code.",
+        "meta": "Maquettes · Prototype"
+      },
+      {
+        "num": "03",
+        "title": "Développement",
+        "body": "Des livraisons régulières sur un environnement de test, pour suivre l'avancement et réagir au fil de l'eau.",
+        "meta": "Environnement de test · Démos"
+      },
+      {
+        "num": "04",
+        "title": "Lancement & suivi",
+        "body": "Mise en production, publication sur les stores, supervision et évolutions dans la durée.",
+        "meta": "Mise en ligne · Maintenance"
+      }
+    ],
+    "stats": [
+      { "value": "2021", "label": "Studio en activité depuis 2021" },
+      { "value": "10+", "label": "Produits conçus et développés" },
+      { "value": "4", "label": "Plateformes : iOS, Android, web et desktop" },
+      { "value": "48 h", "label": "Pour une première réponse à votre demande" }
     ]
   },
   "Contact": {
-    "screenLabel": "06 Contact",
-    "eyebrow": "06 / Transmettre",
-    "titleLine1": "Cartographions ensemble",
-    "titleLine2": "quelque chose de <em>nouveau.</em>",
-    "sub": "Parlez-nous du produit que vous voulez construire. Nous répondons sous deux jours ouvrés — sans formules toutes faites.",
+    "eyebrow": "Contact",
+    "titleLine1": "Un projet en tête ?",
+    "titleLine2": "Parlons-en.",
+    "sub": "Quelques lignes suffisent. Réponse sous 48 h ouvrées, avec les bonnes questions et une première estimation.",
     "fields": {
       "name": "Nom",
-      "namePlaceholder": "Ada Lovelace",
+      "namePlaceholder": "Marie Dupont",
       "email": "Email",
-      "emailPlaceholder": "ada@signal.io",
-      "scope": "Périmètre",
-      "scopeOptions": [
-        "Web Design",
-        "Développement App",
-        "Product Design",
-        "Engagement Studio complet"
+      "emailPlaceholder": "marie@entreprise.fr",
+      "type": "Type de projet",
+      "typeOptions": [
+        "Application mobile",
+        "Site web",
+        "Logiciel sur mesure",
+        "Je ne sais pas encore"
       ],
-      "message": "Brief de mission",
-      "messagePlaceholder": "Quelques phrases sur ce que vous construisez, où cela mène, et quand vous en avez besoin."
+      "message": "Votre projet",
+      "messagePlaceholder": "Ce que vous voulez construire, pour qui, et pour quand."
     },
-    "submit": "Transmettre",
-    "transmitting": "· Transmission du signal…",
-    "received": "✶ Signal reçu. Réponse sous 48 h."
+    "submit": "Envoyer le message",
+    "opening": "Votre messagerie s'ouvre avec le message prérempli.",
+    "direct": "Ou écrivez directement à",
+    "subject": "Nouveau projet — {type}"
   },
   "Footer": {
-    "tagline": "Un studio indépendant qui conçoit et construit des produits numériques avec soin, goût et une vision à long terme.",
+    "tagline": "Studio indépendant de conception et de développement : applications, sites et logiciels sur mesure.",
     "studio": {
       "title": "Studio",
-      "about": "À propos",
-      "vision": "Vision",
       "projects": "Projets",
-      "services": "Services"
+      "services": "Services",
+      "process": "Méthode",
+      "contact": "Contact"
+    },
+    "products": {
+      "title": "Produits"
     },
     "connect": {
-      "title": "Réseaux",
-      "email": "hello@kepler-industries.com",
-      "arena": "Are.na",
-      "readcv": "Read.cv",
-      "twitter": "Twitter / X"
+      "title": "Contact",
+      "clientSpace": "Espace client",
+      "github": "GitHub"
     },
-    "signal": {
-      "title": "Signal",
-      "newsletter": "Newsletter — trimestrielle",
-      "fieldNotes": "Notes de terrain",
-      "pressKit": "Kit presse"
-    },
-    "copyright": "© 2026 Kepler Industries · Tous droits réservés",
-    "coords": "48,8566° N · 2,3522° E",
-    "version": "v 1.04 / build 2026·05"
+    "copyright": "© {year} Kepler Industries",
+    "madeIn": "Conçu et développé en France"
   }
 }

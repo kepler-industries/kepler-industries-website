@@ -15,16 +15,8 @@ export function KeplerMark({ className }: { className?: string }) {
   );
 }
 
-export function BrandMark() {
-  return (
-    <span className="brand-mark">
-      <KeplerMark />
-    </span>
-  );
-}
-
 export function BrandLink({
-  href = "#",
+  href = "#top",
   ariaLabel,
 }: {
   href?: string;
@@ -32,9 +24,9 @@ export function BrandLink({
 }) {
   return (
     <a href={href} className="brand" aria-label={ariaLabel}>
-      <BrandMark />
-      <span className="brand-name">
-        Kepler<em>Industries</em>
+      <KeplerMark />
+      <span>
+        Kepler <span className="brand-sub">Industries</span>
       </span>
     </a>
   );
@@ -42,11 +34,25 @@ export function BrandLink({
 
 export function ArrowIcon({ className = "arrow" }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 14 14" fill="none">
+    <svg className={className} viewBox="0 0 14 14" fill="none" aria-hidden="true">
       <path
         d="M2 7h10m0 0L7 2m5 5l-5 5"
         stroke="currentColor"
         strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function ArrowUpRight({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 12 12" fill="none" aria-hidden="true">
+      <path
+        d="M3 9l6-6M4 3h5v5"
+        stroke="currentColor"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

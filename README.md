@@ -1,6 +1,6 @@
 # Kepler Industries — Website
 
-Marketing site for Kepler Industries, an independent creative studio designing and building ambitious digital products.
+Marketing site for Kepler Industries, an independent studio that designs and builds custom mobile apps, websites and software. French first (`/`), English at `/en` — see [I18N.md](I18N.md).
 
 Live at [www.kepler-industries.com](https://www.kepler-industries.com).
 
@@ -10,6 +10,7 @@ Live at [www.kepler-industries.com](https://www.kepler-industries.com).
 - TypeScript
 - Tailwind CSS v4
 - Geist + Geist Mono + Instrument Serif (via `next/font/google`)
+- Hero 3D logo: raw WebGL raymarching shader (`components/k-shader.tsx`), no 3D dependency
 - Deployed on Coolify from a Dockerfile
 
 ## Local development
