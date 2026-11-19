@@ -236,9 +236,11 @@
       "messagePlaceholder": "Ce que vous voulez construire, pour qui, et pour quand."
     },
     "submit": "Envoyer le message",
-    "opening": "Votre messagerie s'ouvre avec le message prérempli.",
-    "direct": "Ou écrivez directement à",
-    "subject": "Nouveau projet — {type}"
+    "sending": "Envoi en cours…",
+    "success": "Message envoyé, vous allez recevoir une confirmation par email.",
+    "rateLimited": "Trop de messages envoyés, réessayez plus tard.",
+    "error": "L'envoi n'a pas abouti. Écrivez-nous directement à <link>{email}</link>.",
+    "direct": "Ou écrivez directement à"
   },
   "Footer": {
     "tagline": "Studio indépendant de conception et de développement : applications, sites et logiciels sur mesure.",

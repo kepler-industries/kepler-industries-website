@@ -236,9 +236,11 @@
       "messagePlaceholder": "What you want to build, who it's for, and when you need it."
     },
     "submit": "Send message",
-    "opening": "Your mail app is opening with the message pre-filled.",
-    "direct": "Or write directly to",
-    "subject": "New project — {type}"
+    "sending": "Sending…",
+    "success": "Message sent — you'll receive a confirmation by email.",
+    "rateLimited": "Too many messages sent, please try again later.",
+    "error": "Your message couldn't be sent. Write to us directly at <link>{email}</link>.",
+    "direct": "Or write directly to"
   },
   "Footer": {
     "tagline": "Independent design and engineering studio: custom apps, websites and software.",

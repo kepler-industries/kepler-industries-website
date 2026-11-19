@@ -1,43 +1,104 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ArrowIcon } from "./brand-mark";
 import { Tile } from "./icons";
 import { SignalWave } from "./signal-wave";
 
 const EMAIL = "hello@kepler-industries.com";
+// Route publique de Kepler Business : enregistre la demande, prévient le
+// studio et envoie un accusé de réception à la personne.
+const ENDPOINT = "https://business.kepler-industries.com/api/public/contact";
+
+const FIELDS = ["name", "email", "type", "message"] as const;
+type FieldName = (typeof FIELDS)[number];
+type FieldErrors = Partial<Record<FieldName, string>>;
+type Status = "idle" | "sending" | "success" | "invalid" | "rate" | "error";
 
 export function Contact() {
   const t = useTranslations("Contact");
   const f = useTranslations("Contact.fields");
+  const locale = useLocale();
   const options = f.raw("typeOptions") as string[];
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
+  const [errors, setErrors] = useState<FieldErrors>({});
 
-  // Pas de back-end d'envoi : on ouvre la messagerie du visiteur avec un
-  // message prérempli, adressé au studio.
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const name = String(data.get("name") ?? "").trim();
-    const email = String(data.get("email") ?? "").trim();
-    const type = String(data.get("type") ?? options[0]);
-    const message = String(data.get("message") ?? "").trim();
+    if (status === "sending") return;
 
-    const subject = t("subject", { type });
-    const body = [
-      `${f("name")} : ${name}`,
-      `${f("email")} : ${email}`,
-      `${f("type")} : ${type}`,
-      "",
-      message,
-    ].join("\n");
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const value = (key: string) => String(data.get(key) ?? "");
 
-    setStatus(t("opening"));
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
+    setStatus("sending");
+    setErrors({});
+
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: value("name").trim(),
+          email: value("email").trim(),
+          type: value("type"),
+          message: value("message").trim(),
+          locale,
+          source: window.location.href,
+          website: value("website"),
+        }),
+      });
+
+      if (res.status === 201) {
+        form.reset();
+        setStatus("success");
+        return;
+      }
+
+      if (res.status === 400) {
+        const body = (await res.json().catch(() => null)) as {
+          fields?: Record<string, unknown>;
+        } | null;
+        const next: FieldErrors = {};
+        for (const key of FIELDS) {
+          const msg = body?.fields?.[key];
+          if (typeof msg === "string") next[key] = msg;
+        }
+        const first = FIELDS.find((key) => next[key]);
+        if (first) {
+          setErrors(next);
+          setStatus("invalid");
+          form.querySelector<HTMLElement>(`[name="${first}"]`)?.focus();
+          return;
+        }
+      }
+
+      setStatus(res.status === 429 ? "rate" : "error");
+    } catch {
+      setStatus("error");
+    }
   };
+
+  // Une erreur disparaît dès qu'on corrige le champ concerné.
+  const onChange = (e: FormEvent<HTMLFormElement>) => {
+    const name = (e.target as HTMLInputElement).name as FieldName;
+    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: undefined }));
+  };
+
+  const fieldProps = (name: FieldName) =>
+    errors[name]
+      ? { "aria-invalid": true, "aria-describedby": `f-${name}-error` }
+      : {};
+
+  const fieldError = (name: FieldName) =>
+    errors[name] ? (
+      <p className="field-error" id={`f-${name}-error`}>
+        {errors[name]}
+      </p>
+    ) : null;
+
+  const sending = status === "sending";
 
   return (
     <section className="section contact" id="contact">
@@ -57,7 +118,22 @@ export function Contact() {
         <p className="lede">{t("sub")}</p>
       </header>
 
-      <form className="card form reveal" onSubmit={onSubmit}>
+      <form
+        className="card form reveal"
+        onSubmit={onSubmit}
+        onChange={onChange}
+        aria-busy={sending}
+      >
+        {/* Pot de miel : invisible pour un humain, rempli par les robots. */}
+        <input
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          style={{ position: "absolute", left: "-9999px" }}
+        />
+
         <div className="form-row">
           <div className="field">
             <label htmlFor="f-name">{f("name")}</label>
@@ -68,7 +144,9 @@ export function Contact() {
               autoComplete="name"
               placeholder={f("namePlaceholder")}
               required
+              {...fieldProps("name")}
             />
+            {fieldError("name")}
           </div>
           <div className="field">
             <label htmlFor="f-email">{f("email")}</label>
@@ -79,18 +157,26 @@ export function Contact() {
               autoComplete="email"
               placeholder={f("emailPlaceholder")}
               required
+              {...fieldProps("email")}
             />
+            {fieldError("email")}
           </div>
         </div>
         <div className="field">
           <label htmlFor="f-type">{f("type")}</label>
-          <select id="f-type" name="type" defaultValue={options[0]}>
+          <select
+            id="f-type"
+            name="type"
+            defaultValue={options[0]}
+            {...fieldProps("type")}
+          >
             {options.map((opt) => (
               <option key={opt} value={opt}>
                 {opt}
               </option>
             ))}
           </select>
+          {fieldError("type")}
         </div>
         <div className="field">
           <label htmlFor="f-msg">{f("message")}</label>
@@ -99,19 +185,38 @@ export function Contact() {
             name="message"
             placeholder={f("messagePlaceholder")}
             required
+            minLength={10}
+            {...fieldProps("message")}
           />
+          {fieldError("message")}
         </div>
         <div className="form-foot">
           <p className="form-direct">
             {t("direct")} <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </p>
-          <button className="btn btn-primary" type="submit">
-            {t("submit")}
+          <button className="btn btn-primary" type="submit" disabled={sending}>
+            {sending ? t("sending") : t("submit")}
             <ArrowIcon />
           </button>
         </div>
-        <p className="form-status" aria-live="polite">
-          {status}
+        <p
+          className={`form-status${
+            status === "success"
+              ? " is-success"
+              : status === "rate" || status === "error"
+                ? " is-error"
+                : ""
+          }`}
+          role="status"
+          aria-live="polite"
+        >
+          {status === "success" && t("success")}
+          {status === "rate" && t("rateLimited")}
+          {status === "error" &&
+            t.rich("error", {
+              email: EMAIL,
+              link: (chunks) => <a href={`mailto:${EMAIL}`}>{chunks}</a>,
+            })}
         </p>
       </form>
     </section>

@@ -2363,6 +2363,39 @@ canvas.wave {
   text-align: center;
 }
 
+.form-status.is-success {
+  color: #86efac;
+}
+
+.form-status.is-error {
+  color: #fca5a5;
+}
+
+.form-status a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.field-error {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #fca5a5;
+}
+
+.field [aria-invalid="true"],
+.field [aria-invalid="true"]:focus {
+  border-color: rgba(248, 113, 113, 0.6);
+  background: rgba(248, 113, 113, 0.05);
+  box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.08);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+  transform: none;
+}
+
 /* =====================================================================
    Pied de page
    ===================================================================== */
