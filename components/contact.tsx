@@ -118,12 +118,18 @@ export function Contact() {
         <p className="lede">{t("sub")}</p>
       </header>
 
+      {/* method/action : si le visiteur envoie avant le chargement du JS, le
+          navigateur poste directement à l'API (qui accepte aussi les
+          formulaires classiques) au lieu de mettre ses données dans l'URL. */}
       <form
         className="card form reveal"
+        method="post"
+        action={ENDPOINT}
         onSubmit={onSubmit}
         onChange={onChange}
         aria-busy={sending}
       >
+        <input type="hidden" name="locale" value={locale} />
         {/* Pot de miel : invisible pour un humain, rempli par les robots. */}
         <input
           name="website"
