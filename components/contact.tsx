@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowIcon } from "./brand-mark";
 import { Tile } from "./icons";
@@ -23,6 +23,12 @@ export function Contact() {
   const options = f.raw("typeOptions") as string[];
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
+  // Anti-spam : temps écoulé depuis l'affichage du formulaire. Un robot qui
+  // poste directement à l'API n'envoie pas cette valeur, ou envoie trop vite.
+  const shownAt = useRef<number | null>(null);
+  useEffect(() => {
+    shownAt.current = Date.now();
+  }, []);
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,6 +53,7 @@ export function Contact() {
           locale,
           source: window.location.href,
           website: value("website"),
+          elapsed: shownAt.current ? Date.now() - shownAt.current : null,
         }),
       });
 
