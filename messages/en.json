@@ -261,5 +261,11 @@
     },
     "copyright": "© {year} Kepler Industries",
     "madeIn": "Designed and built in France"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "heading": "This page doesn't exist.",
+    "body": "The address may have changed, or it may contain a typo.",
+    "home": "Back to home"
   }
 }

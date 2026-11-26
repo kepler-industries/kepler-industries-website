@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowIcon } from "./brand-mark";
+import { CONTACT_EMAIL as EMAIL, Email } from "./email";
 import { Tile } from "./icons";
 import { SignalWave } from "./signal-wave";
 
-const EMAIL = "hello@kepler-industries.com";
 // Route publique de Kepler Business : enregistre la demande, prévient le
 // studio et envoie un accusé de réception à la personne.
 const ENDPOINT = "https://business.kepler-industries.com/api/public/contact";
@@ -205,7 +205,7 @@ export function Contact() {
         </div>
         <div className="form-foot">
           <p className="form-direct">
-            {t("direct")} <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            {t("direct")} <Email />
           </p>
           <button className="btn btn-primary" type="submit" disabled={sending}>
             {sending ? t("sending") : t("submit")}
