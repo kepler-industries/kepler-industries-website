@@ -1,7 +1,8 @@
 import type { CSSProperties } from "react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight } from "./brand-mark";
 import { Tile } from "./icons";
+import { powrUrl } from "./links";
 import { ProjectVisual } from "./project-visuals";
 
 type Item = {
@@ -27,7 +28,6 @@ const META: Record<
 > = {
   powr: {
     accent: "#ff7a29",
-    url: "https://www.powr-app.com",
     stack: ["React Native", "Expo", "Hono", "Bun", "Prisma"],
     state: "live",
     span: "wide",
@@ -78,6 +78,9 @@ export async function Projects() {
   const m = await getTranslations("Mocks");
   const items = t.raw("items") as Item[];
   const more = t.raw("more") as MoreItem[];
+  const locale = await getLocale();
+  // Powr a une version par langue : lien direct, sans la redirection de la racine.
+  const urlFor = (id: string) => (id === "powr" ? powrUrl(locale) : META[id].url);
   const hl = (chunks: React.ReactNode) => <span className="hl">{chunks}</span>;
 
   return (
@@ -117,10 +120,10 @@ export async function Projects() {
                       <li key={s}>{s}</li>
                     ))}
                   </ul>
-                  {meta.url ? (
+                  {urlFor(p.id) ? (
                     <a
                       className="pcard-link"
-                      href={meta.url}
+                      href={urlFor(p.id)}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${t("visit")} — ${p.name}`}

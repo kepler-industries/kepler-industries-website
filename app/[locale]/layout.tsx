@@ -3,8 +3,7 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing, type Locale } from "@/i18n/routing";
-import { JsonLd } from "@/components/json-ld";
+import { BASE_URL, localeUrl, routing, type Locale } from "@/i18n/routing";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -24,8 +23,6 @@ const instrumentSerif = Instrument_Serif({
   style: ["normal", "italic"],
 });
 
-const BASE_URL = "https://www.kepler-industries.com";
-
 const OG_LOCALES: Record<Locale, string> = {
   fr: "fr_FR",
   en: "en_US",
@@ -39,6 +36,10 @@ type LayoutProps = {
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+// Seules « fr » et « en » existent : tout autre premier segment (« /foo.php »)
+// est une route inconnue, servie par la 404 racine (app/not-found.tsx).
+export const dynamicParams = false;
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -61,14 +62,6 @@ export async function generateMetadata({
     locale: safeLocale,
     namespace: "Metadata",
   });
-
-  const localeUrl = (l: string) =>
-    l === routing.defaultLocale ? BASE_URL : `${BASE_URL}/${l}`;
-
-  const languages: Record<string, string> = Object.fromEntries(
-    routing.locales.map((l) => [l, localeUrl(l)]),
-  );
-  languages["x-default"] = BASE_URL;
 
   const ogLocaleAlternates = routing.locales
     .filter((l) => l !== safeLocale)
@@ -106,10 +99,8 @@ export async function generateMetadata({
       address: false,
       telephone: false,
     },
-    alternates: {
-      canonical: localeUrl(safeLocale),
-      languages,
-    },
+    // canonical et hreflang : dans la page (app/[locale]/page.tsx), pour
+    // qu'une page 404 n'hérite pas de ceux de l'accueil.
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
@@ -132,8 +123,6 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("ogTitle"),
       description: t("twitterDescription"),
-      creator: "@keplerindustries",
-      site: "@keplerindustries",
       images: [
         {
           url: "/twitter-image",
@@ -166,8 +155,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "Metadata" });
-
   return (
     <html
       lang={locale}
@@ -183,11 +170,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         />
       </head>
       <body>
-        <JsonLd
-          locale={locale}
-          name={t("title")}
-          description={t("description")}
-        />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

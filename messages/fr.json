@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Kepler Industries — Studio de conception d'apps, de sites et de logiciels sur mesure",
-    "description": "Kepler Industries conçoit et développe des applications mobiles, des sites web et des logiciels sur mesure pour les entreprises. Un seul interlocuteur, de la première maquette à la mise en production.",
+    "title": "Kepler Industries — Apps, sites et logiciels sur mesure",
+    "description": "Applications mobiles, sites web et logiciels conçus et développés sur mesure. Un seul interlocuteur, de la première maquette à la mise en production.",
     "ogTitle": "Kepler Industries — Du concept au code",
     "ogDescription": "Applications iOS & Android, sites web et logiciels métier, conçus et développés sur mesure par un studio indépendant.",
     "twitterDescription": "Applications mobiles, sites et logiciels sur mesure. Du concept au code.",
@@ -261,5 +261,11 @@
     },
     "copyright": "© {year} Kepler Industries",
     "madeIn": "Conçu et développé en France"
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "heading": "Cette page n'existe pas.",
+    "body": "L'adresse a peut-être changé, ou elle contient une faute de frappe.",
+    "home": "Retour à l'accueil"
   }
 }

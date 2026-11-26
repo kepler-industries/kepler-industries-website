@@ -1,23 +1,28 @@
-import { routing } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
+import { BASE_URL, localeUrl, routing } from "@/i18n/routing";
+import { CONTACT_EMAIL as EMAIL } from "./email";
 
-const BASE_URL = "https://www.kepler-industries.com";
+// Seulement des faits affichés sur la page : nom, logo, description, adresse
+// de contact (pied de page), GitHub (pied de page), « depuis 2021 » (section
+// Méthode), « Conçu et développé en France » et les quatre services. Pas
+// d'adresse postale, de téléphone ni de numéro d'entreprise : le site n'en
+// affiche pas.
 
-type Props = {
-  locale: string;
-  name: string;
-  description: string;
-};
+type ServiceItem = { id: string; title: string; body: string };
 
-export function JsonLd({ locale, name, description }: Props) {
-  const url =
-    locale === routing.defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`;
+export async function JsonLd({ locale }: { locale: string }) {
+  const meta = await getTranslations({ locale, namespace: "Metadata" });
+  const hero = await getTranslations({ locale, namespace: "Hero" });
+  const footer = await getTranslations({ locale, namespace: "Footer" });
+  const services = await getTranslations({ locale, namespace: "Services" });
+  const items = services.raw("items") as ServiceItem[];
+  const url = localeUrl(locale);
 
   const organization = {
-    "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${BASE_URL}/#organization`,
     name: "Kepler Industries",
-    alternateName: ["Kepler"],
+    alternateName: "Kepler",
     url: BASE_URL,
     logo: {
       "@type": "ImageObject",
@@ -29,118 +34,66 @@ export function JsonLd({ locale, name, description }: Props) {
       caption: "Kepler Industries",
     },
     image: { "@id": `${BASE_URL}/#logo` },
-    description,
+    description: footer("tagline"),
+    slogan: `${hero("titleLine1")} ${hero("titleLine2")}`,
     foundingDate: "2021",
-    slogan: "Du concept au code.",
-    knowsAbout: [
-      "Développement d'applications mobiles",
-      "Développement web",
-      "Logiciels sur mesure",
-      "Design produit",
-      "React Native",
-      "Next.js",
-    ],
-    sameAs: ["https://github.com/kepler-industries"],
+    email: EMAIL,
     contactPoint: {
       "@type": "ContactPoint",
-      contactType: "customer support",
-      email: "hello@kepler-industries.com",
+      contactType: "customer service",
+      email: EMAIL,
       availableLanguage: ["French", "English"],
-      areaServed: "FR",
     },
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "FR",
+    address: { "@type": "PostalAddress", addressCountry: "FR" },
+    sameAs: ["https://github.com/kepler-industries"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: services("eyebrow"),
+      itemListElement: items.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.title,
+          description: s.body,
+          provider: { "@id": `${BASE_URL}/#organization` },
+        },
+      })),
     },
   };
 
   const website = {
-    "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${BASE_URL}/#website`,
     url: BASE_URL,
     name: "Kepler Industries",
-    description,
-    inLanguage: routing.locales,
+    alternateName: "Kepler",
+    inLanguage: [...routing.locales],
     publisher: { "@id": `${BASE_URL}/#organization` },
   };
 
   const webpage = {
-    "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${url}/#webpage`,
     url,
-    name,
-    description,
+    name: meta("title"),
+    description: meta("description"),
     inLanguage: locale,
     isPartOf: { "@id": `${BASE_URL}/#website` },
     about: { "@id": `${BASE_URL}/#organization` },
-    primaryImageOfPage: { "@id": `${BASE_URL}/#logo` },
-  };
-
-  const professionalService = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": `${BASE_URL}/#service`,
-    name: "Kepler Industries",
-    description,
-    url: BASE_URL,
-    image: `${BASE_URL}/kepler.png`,
-    areaServed: "FR",
-    parentOrganization: { "@id": `${BASE_URL}/#organization` },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Services du studio",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Applications mobiles",
-            description:
-              "Applications iOS et Android, de la maquette à la publication sur l'App Store et Google Play.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Sites & plateformes web",
-            description:
-              "Sites vitrines, plateformes SaaS, espaces clients et back-offices sur mesure.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Logiciels sur mesure",
-            description:
-              "API, outils métier, automatisations, intégrations IA et applications desktop.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Hébergement & suivi",
-            description:
-              "Mise en ligne, supervision, sauvegardes et maintenance des produits livrés.",
-          },
-        },
-      ],
-    },
   };
 
   const graph = {
     "@context": "https://schema.org",
-    "@graph": [organization, website, webpage, professionalService],
+    "@graph": [organization, website, webpage],
   };
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
+      // `<` échappé : aucune chaîne ne peut fermer la balise <script>.
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(graph).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }

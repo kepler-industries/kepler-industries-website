@@ -1,12 +1,15 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { BrandLink } from "./brand-mark";
+import { Email } from "./email";
 import { LanguageSwitcher } from "./language-switcher";
+import { CLIENT_SPACE_URL, powrUrl } from "./links";
 
 export async function SiteFooter() {
   const t = await getTranslations("Footer");
   const studio = await getTranslations("Footer.studio");
   const products = await getTranslations("Footer.products");
   const connect = await getTranslations("Footer.connect");
+  const locale = await getLocale();
 
   return (
     <footer className="section footer">
@@ -16,7 +19,7 @@ export async function SiteFooter() {
           <p>{t("tagline")}</p>
         </div>
         <div className="foot-col">
-          <h4>{studio("title")}</h4>
+          <h2>{studio("title")}</h2>
           <ul>
             <li>
               <a href="#projects">{studio("projects")}</a>
@@ -33,10 +36,10 @@ export async function SiteFooter() {
           </ul>
         </div>
         <div className="foot-col">
-          <h4>{products("title")}</h4>
+          <h2>{products("title")}</h2>
           <ul>
             <li>
-              <a href="https://www.powr-app.com" target="_blank" rel="noopener noreferrer">
+              <a href={powrUrl(locale)} target="_blank" rel="noopener noreferrer">
                 Powr
               </a>
             </li>
@@ -52,14 +55,14 @@ export async function SiteFooter() {
           </ul>
         </div>
         <div className="foot-col">
-          <h4>{connect("title")}</h4>
+          <h2>{connect("title")}</h2>
           <ul>
             <li>
-              <a href="mailto:hello@kepler-industries.com">hello@kepler-industries.com</a>
+              <Email />
             </li>
             <li>
               <a
-                href="https://business.kepler-industries.com/espace"
+                href={CLIENT_SPACE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >

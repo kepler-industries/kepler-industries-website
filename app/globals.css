@@ -14,7 +14,7 @@
 
   --fg: #f2f2f2;
   --fg-2: #a1a4a5;
-  --fg-3: #6f7275;
+  --fg-3: #7a7d80; /* 4,5:1 minimum sur les fonds #000 à #111113 */
   --fg-4: #46494c;
 
   --line: rgba(255, 255, 255, 0.07);
@@ -2419,7 +2419,7 @@ canvas.wave {
   line-height: 1.6;
 }
 
-.foot-col h4 {
+.foot-col h2 {
   font-size: 14px;
   font-weight: 500;
   color: #fff;
@@ -2840,4 +2840,18 @@ canvas.wave {
     filter: none;
     transform: none;
   }
+}
+
+/* Page 404 */
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.not-found .lede {
+  margin-top: 0;
 }

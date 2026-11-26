@@ -1,27 +1,16 @@
 import type { MetadataRoute } from "next";
-import { routing } from "@/i18n/routing";
+import { localeUrl, routing } from "@/i18n/routing";
 
-const BASE_URL = "https://www.kepler-industries.com";
-
-function urlFor(locale: string): string {
-  return locale === routing.defaultLocale
-    ? BASE_URL
-    : `${BASE_URL}/${locale}`;
-}
-
+// Pas de `lastModified` : la date du build n'est pas une date de modification
+// du contenu (Google ignore aussi `priority` et `changeFrequency`).
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   const languages: Record<string, string> = Object.fromEntries(
-    routing.locales.map((l) => [l, urlFor(l)]),
+    routing.locales.map((l) => [l, localeUrl(l)]),
   );
-  languages["x-default"] = urlFor(routing.defaultLocale);
+  languages["x-default"] = localeUrl(routing.defaultLocale);
 
   return routing.locales.map((locale) => ({
-    url: urlFor(locale),
-    lastModified,
-    changeFrequency: "weekly",
-    priority: locale === routing.defaultLocale ? 1 : 0.8,
+    url: localeUrl(locale),
     alternates: { languages },
   }));
 }
