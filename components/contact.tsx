@@ -5,11 +5,11 @@ import { useLocale, useTranslations } from "next-intl";
 import { ArrowIcon } from "./brand-mark";
 import { CONTACT_EMAIL as EMAIL, Email } from "./email";
 import { Tile } from "./icons";
+import { CONTACT_ENDPOINT as ENDPOINT } from "./links";
 import { SignalWave } from "./signal-wave";
 
-// Route publique de Kepler Business : enregistre la demande, prévient le
-// studio et envoie un accusé de réception à la personne.
-const ENDPOINT = "https://business.kepler-industries.com/api/public/contact";
+// ENDPOINT : route publique de Kepler Business ; elle enregistre la demande,
+// prévient le studio et envoie un accusé de réception à la personne.
 
 const FIELDS = ["name", "email", "type", "message"] as const;
 type FieldName = (typeof FIELDS)[number];

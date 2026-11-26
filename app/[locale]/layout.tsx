@@ -75,7 +75,10 @@ export async function generateMetadata({
     description: t("description"),
     metadataBase: new URL(BASE_URL),
     applicationName: "Kepler Industries",
-    referrer: "origin-when-cross-origin",
+    // Même valeur que l'en-tête Referrer-Policy (next.config.ts) : la balise
+    // l'emporterait sinon, et « origin-when-cross-origin » envoie aussi
+    // l'origine vers un site en http.
+    referrer: "strict-origin-when-cross-origin",
     keywords: [
       "Kepler Industries",
       "studio de développement",
